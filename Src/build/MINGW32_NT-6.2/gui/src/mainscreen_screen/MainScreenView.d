@@ -41,7 +41,7 @@ build/MINGW32_NT-6.2/gui/src/mainscreen_screen/MainScreenView.o: \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  gui/include/gui/model/Model.hpp \
- C:\Users\Ahmad\Desktop\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Inc\defines.h \
+ C:\Users\Ahmad\WorkSpace\PosheshHayeNanoSakhtar\LCD_BOARD_Firmware\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Inc\defines.h \
  gui/include/gui/mainscreen_screen/MainScreenPresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
@@ -49,7 +49,7 @@ build/MINGW32_NT-6.2/gui/src/mainscreen_screen/MainScreenView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphWrapAndClear.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphScroll.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
@@ -94,6 +94,8 @@ build/MINGW32_NT-6.2/gui/src/mainscreen_screen/MainScreenView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SlideMenu.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
+ gui/include/gui/containers/CustomContainer2.hpp \
+ generated/gui_generated/include/gui_generated/containers/CustomContainer2Base.hpp \
  gui/include/gui/containers/CustomContainer1.hpp \
  generated/gui_generated/include/gui_generated/containers/CustomContainer1Base.hpp
 
@@ -179,7 +181,7 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 gui/include/gui/model/Model.hpp:
 
-C:\Users\Ahmad\Desktop\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Inc\defines.h:
+C:\Users\Ahmad\WorkSpace\PosheshHayeNanoSakhtar\LCD_BOARD_Firmware\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Inc\defines.h:
 
 gui/include/gui/mainscreen_screen/MainScreenPresenter.hpp:
 
@@ -195,7 +197,7 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphWrapAndClear.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphScroll.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp:
 
@@ -284,6 +286,10 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
+
+gui/include/gui/containers/CustomContainer2.hpp:
+
+generated/gui_generated/include/gui_generated/containers/CustomContainer2Base.hpp:
 
 gui/include/gui/containers/CustomContainer1.hpp:
 

@@ -8,8 +8,11 @@ class CustomContainer2 : public CustomContainer2Base
 public:
     CustomContainer2();
     virtual ~CustomContainer2() {}
-
+ 
     virtual void initialize();
+
+    virtual void CalibrationExitBtnClicked();
+
 protected:
 };
 

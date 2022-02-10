@@ -64,6 +64,19 @@ bool Model::checkBtnPressed(uint8_t button)
       PlusBtnPressed = 0;      
       break;
     }    
+  case CALIBRATION_EXIT :
+    {
+      btnMode = CalibrationExitPressed;
+      CalibrationExitPressed = 0;      
+      break;
+    }   
+    
+  case START_BUTTON :
+    {
+      btnMode = StartBtnPressed;
+        StartBtnPressed = 0;      
+      break;
+    }
     
   }
   
@@ -115,6 +128,17 @@ void Model::setBtnPressed(uint8_t button)
       PlusBtnPressed = 1;
       break;
     }    
+  case CALIBRATION_EXIT :
+    {
+      CalibrationExitPressed = 1;      
+      break;
+    }
+    
+  case START_BUTTON :
+    {
+      StartBtnPressed = 1;      
+      break;
+    }
   }
 }
 
@@ -162,6 +186,24 @@ void Model::setEnteredValue(uint8_t mode , uint16_t value)
       ElapsedTimevalue = value;     
       break;
     }  
+    
+   case VOLTAGEGRAPH :
+    {
+      VoltageGraphValue = value;     
+      break;
+    } 
+    
+   case CURRENTGRAPH :
+    {
+      CurrentGraphValue = value;     
+      break;
+    }
+    
+   case POWERGRAPH :
+    {
+      PowerGraphValue = value;     
+      break;
+    }
   }
 }
 
@@ -210,9 +252,27 @@ uint16_t Model::getEnteredValue(uint8_t mode)
     {
       value = ElapsedTimevalue;     
       break;
-    }     
+    }    
     
+   case VOLTAGEGRAPH :
+    {
+      value = VoltageGraphValue;     
+      break;
+    } 
+    
+   case CURRENTGRAPH :
+    {
+      value = CurrentGraphValue;     
+      break;
+    }
+    
+   case POWERGRAPH :
+    {
+      value = PowerGraphValue;     
+      break;
+    }
   }
+    
   
   return value;
 }

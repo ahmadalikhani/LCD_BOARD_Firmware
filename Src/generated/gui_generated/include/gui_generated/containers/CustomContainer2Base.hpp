@@ -6,6 +6,10 @@
 
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class CustomContainer2Base : public touchgfx::Container
 {
@@ -14,12 +18,92 @@ public:
     virtual ~CustomContainer2Base() {}
     virtual void initialize();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void CalibrationExitBtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
     }
 
+    /*
+     * Member Declarations
+     */
+    touchgfx::Box box2;
+    touchgfx::Box box1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton;
+    touchgfx::TextAreaWithOneWildcard QuanchText;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_1;
+    touchgfx::TextAreaWithOneWildcard QuanchText_1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_2;
+    touchgfx::TextAreaWithOneWildcard QuanchText_2;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_3;
+    touchgfx::TextAreaWithOneWildcard QuanchText_3;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_4;
+    touchgfx::TextAreaWithOneWildcard QuanchText_4;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_5;
+    touchgfx::TextAreaWithOneWildcard QuanchText_5;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_1_1;
+    touchgfx::TextAreaWithOneWildcard QuanchText_1_1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_2_1;
+    touchgfx::TextAreaWithOneWildcard QuanchText_2_1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_3_1;
+    touchgfx::TextAreaWithOneWildcard QuanchText_3_1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_4_1;
+    touchgfx::TextAreaWithOneWildcard QuanchText_4_1;
+    touchgfx::TextArea Parameter1;
+    touchgfx::TextArea Parameter6;
+    touchgfx::TextArea Parameter2;
+    touchgfx::TextArea Parameter3;
+    touchgfx::TextArea Parameter8;
+    touchgfx::TextArea Parameter4;
+    touchgfx::TextArea Parameter9;
+    touchgfx::TextArea Parameter5;
+    touchgfx::TextArea Parameter10;
+    touchgfx::TextArea Parameter7;
+    touchgfx::TextArea ARCLevel_6;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > CalibrationExitBtn;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t QUANCHTEXT_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar QuanchTextBuffer[QUANCHTEXT_SIZE];
+    static const uint16_t QUANCHTEXT_1_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar QuanchText_1Buffer[QUANCHTEXT_1_SIZE];
+    static const uint16_t QUANCHTEXT_2_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar QuanchText_2Buffer[QUANCHTEXT_2_SIZE];
+    static const uint16_t QUANCHTEXT_3_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar QuanchText_3Buffer[QUANCHTEXT_3_SIZE];
+    static const uint16_t QUANCHTEXT_4_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar QuanchText_4Buffer[QUANCHTEXT_4_SIZE];
+    static const uint16_t QUANCHTEXT_5_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar QuanchText_5Buffer[QUANCHTEXT_5_SIZE];
+    static const uint16_t QUANCHTEXT_1_1_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar QuanchText_1_1Buffer[QUANCHTEXT_1_1_SIZE];
+    static const uint16_t QUANCHTEXT_2_1_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar QuanchText_2_1Buffer[QUANCHTEXT_2_1_SIZE];
+    static const uint16_t QUANCHTEXT_3_1_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar QuanchText_3_1Buffer[QUANCHTEXT_3_1_SIZE];
+    static const uint16_t QUANCHTEXT_4_1_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar QuanchText_4_1Buffer[QUANCHTEXT_4_1_SIZE];
+
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<CustomContainer2Base, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

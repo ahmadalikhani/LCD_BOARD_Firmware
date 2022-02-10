@@ -9,7 +9,7 @@
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/graph/GraphWrapAndClear.hpp>
+#include <touchgfx/widgets/graph/GraphScroll.hpp>
 #include <touchgfx/widgets/graph/GraphElements.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/graph/GraphLabels.hpp>
@@ -18,6 +18,7 @@
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/containers/SlideMenu.hpp>
+#include <gui/containers/CustomContainer2.hpp>
 #include <gui/containers/CustomContainer1.hpp>
 
 class MainScreenViewBase : public touchgfx::View<MainScreenPresenter>
@@ -80,6 +81,16 @@ public:
         // Override and implement this function in MainScreen
     }
 
+    virtual void CalibrationPageBtnClicked()
+    {
+        // Override and implement this function in MainScreen
+    }
+
+    virtual void StartBtnClicked()
+    {
+        // Override and implement this function in MainScreen
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -91,13 +102,27 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box Background;
     touchgfx::BoxWithBorder GraphBackground;
-    touchgfx::GraphWrapAndClear<1000> MainGraph;
-    touchgfx::GraphElementLine MainGraphLine1;
-    touchgfx::PainterRGB565 MainGraphLine1Painter;
-    touchgfx::GraphElementGridX MainGraphMajorXAxisGrid;
-    touchgfx::GraphElementGridY MainGraphMajorYAxisGrid;
-    touchgfx::GraphLabelsX MainGraphMajorXAxisLabel;
-    touchgfx::GraphLabelsY MainGraphMajorYAxisLabel;
+    touchgfx::GraphScroll<50> VoltageGraph;
+    touchgfx::GraphElementLine VoltageGraphLine1;
+    touchgfx::PainterRGB565 VoltageGraphLine1Painter;
+    touchgfx::GraphElementGridX VoltageGraphMajorXAxisGrid;
+    touchgfx::GraphElementGridY VoltageGraphMajorYAxisGrid;
+    touchgfx::GraphLabelsX VoltageGraphMajorXAxisLabel;
+    touchgfx::GraphLabelsY VoltageGraphMajorYAxisLabel;
+    touchgfx::GraphScroll<50> CurrentGraph;
+    touchgfx::GraphElementLine CurrentGraphLine1;
+    touchgfx::PainterRGB565 CurrentGraphLine1Painter;
+    touchgfx::GraphElementGridX CurrentGraphMajorXAxisGrid;
+    touchgfx::GraphElementGridY CurrentGraphMajorYAxisGrid;
+    touchgfx::GraphLabelsX CurrentGraphMajorXAxisLabel;
+    touchgfx::GraphLabelsY CurrentGraphMajorYAxisLabel;
+    touchgfx::GraphScroll<50> PowerGraph;
+    touchgfx::GraphElementLine PowerGraphLine1;
+    touchgfx::PainterRGB565 PowerGraphLine1Painter;
+    touchgfx::GraphElementGridX PowerGraphMajorXAxisGrid;
+    touchgfx::GraphElementGridY PowerGraphMajorYAxisGrid;
+    touchgfx::GraphLabelsX PowerGraphMajorXAxisLabel;
+    touchgfx::GraphLabelsY PowerGraphMajorYAxisLabel;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > StartButton;
     touchgfx::TextArea Setpoint;
     touchgfx::TextArea ARCLevel;
@@ -163,6 +188,7 @@ protected:
     touchgfx::TextArea CurrentmodeText;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ModeBox;
     touchgfx::TextArea ModeText;
+    CustomContainer2 CalibrationPage;
     CustomContainer1 keypad1;
 
     /*

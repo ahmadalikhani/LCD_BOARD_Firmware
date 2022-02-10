@@ -21,6 +21,9 @@ public:
     virtual void CvLevelBtnClicked();
     virtual void QuanchTimeBtnClicked();
     virtual void TimeSetBtnClicked();
+    virtual void CalibrationPageBtnClicked();
+    virtual void StartBtnClicked();
+    
     
 protected:
 };

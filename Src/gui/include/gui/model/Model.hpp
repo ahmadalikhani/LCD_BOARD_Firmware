@@ -2,7 +2,7 @@
 #define MODEL_HPP
 
 #include <stdint.h>
-#include "defines.h"  // for final code change to #include <defines.h>
+#include <C:\Users\Ahmad\WorkSpace\PosheshHayeNanoSakhtar\LCD_BOARD_Firmware\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Inc\defines.h>  // for final code change to #include <defines.h>
 class ModelListener;
 
 class Model
@@ -32,6 +32,8 @@ protected:
     bool MinusBtnPressed;
     bool PlusBtnPressed;
     bool DeleteBtnPressed;
+    bool CalibrationExitPressed;
+    bool StartBtnPressed;
     
     uint16_t SetPointValue;
     uint16_t ArcLevelValue;
@@ -40,6 +42,9 @@ protected:
     uint16_t QuanchtimeValue;
     uint16_t TimeSetValue;
     uint16_t ElapsedTimevalue;
+    uint16_t VoltageGraphValue;
+    uint16_t CurrentGraphValue;
+    uint16_t PowerGraphValue;
 };
 
 #endif // MODEL_HPP

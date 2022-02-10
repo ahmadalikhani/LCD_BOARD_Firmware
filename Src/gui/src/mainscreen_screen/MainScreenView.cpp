@@ -1,8 +1,11 @@
 #include <gui/mainscreen_screen/MainScreenView.hpp>
 #include <gui/model/Model.hpp>
-
+#include <stdint.h>
 extern Model model;
 uint8_t input_mode;
+uint16_t counter=0;
+uint16_t end_time=0;
+uint16_t elapsed_time=0;
 
 MainScreenView::MainScreenView()
 {
@@ -116,10 +119,26 @@ void MainScreenView::TimeSetBtnClicked()
   input_mode = TIME_SET;
 }
 
+void MainScreenView::CalibrationPageBtnClicked()
+{
+  MainScreenViewBase::CvLevelBtnClicked();
+  
+  CalibrationPage.setVisible(true);
+  CalibrationPage.invalidate();
+  
+  input_mode = CV_LEVEL;
+}
+
+void MainScreenView::StartBtnClicked()
+{
+  MainScreenViewBase::StartBtnClicked();
+  model.setBtnPressed(START_BUTTON);
+}
+
 void MainScreenView::handleTickEvent()
 {
   bool btnMode=0;
-  
+
   keypad1.handleTickEvent();
   
   btnMode = model.checkBtnPressed(ESC_BUTTON);
@@ -128,12 +147,56 @@ void MainScreenView::handleTickEvent()
        keypad1.setVisible(false);
        keypad1.invalidate();
     }
+    
+   btnMode = model.checkBtnPressed(CALIBRATION_EXIT);
+    if(btnMode == 1)
+    {
+       CalibrationPage.setVisible(false);
+       CalibrationPage.invalidate();
+    }
+    
   btnMode = model.checkBtnPressed(ENTER_BUTTON);
     if(btnMode == 1)
     {
        keypad1.setVisible(false);
        keypad1.invalidate();
-    }  
+    } 
+    
+    if(counter == 30)
+    {
+        elapsed_time = model.getEnteredValue(ELAPSED_TIME);
+        
+        if(model.checkBtnPressed(START_BUTTON))
+        {
+          end_time = model.getEnteredValue(TIME_SET);
+        }
+        
+        if(end_time - elapsed_time > 0)
+          model.setEnteredValue(ELAPSED_TIME , elapsed_time +1);
+        else{
+          model.setEnteredValue(ELAPSED_TIME , 0);
+          end_time = 0;
+        
+        }
+    VoltageGraph.addDataPoint(model.getEnteredValue(VOLTAGEGRAPH));
+    CurrentGraph.addDataPoint(model.getEnteredValue(CURRENTGRAPH));
+    PowerGraph.addDataPoint(model.getEnteredValue(POWERGRAPH));
+    VoltageGraph.invalidate();
+    CurrentGraph.invalidate();
+    PowerGraph.invalidate();
+    
+    model.setEnteredValue(VOLTAGEGRAPH ,(model.getEnteredValue(VOLTAGEGRAPH) + 2)); // graph test (delete in final)
+    model.setEnteredValue(CURRENTGRAPH ,(model.getEnteredValue(CURRENTGRAPH) + 4)); // graph test (delete in final)
+    model.setEnteredValue(POWERGRAPH ,(model.getEnteredValue(POWERGRAPH) + 6)); // graph test (delete in final)
+    if(model.getEnteredValue(POWERGRAPH) > 100)
+      model.setEnteredValue(POWERGRAPH ,0); // graph test (delete in final)
+    if(model.getEnteredValue(VOLTAGEGRAPH) > 100)
+      model.setEnteredValue(VOLTAGEGRAPH ,0); // graph test (delete in final)    
+    if(model.getEnteredValue(CURRENTGRAPH) > 100)
+      model.setEnteredValue(CURRENTGRAPH ,0); // graph test (delete in final)
+    
+    counter=0;
+    }
     
     Unicode::snprintf(SetpointTextBuffer, SETPOINTTEXT_SIZE, "%04d", model.getEnteredValue(SET_POINT) );
     SetpointText.setWildcard(SetpointTextBuffer);
@@ -158,4 +221,10 @@ void MainScreenView::handleTickEvent()
     Unicode::snprintf(TimeSetTextBuffer, TIMESETTEXT_SIZE, "%04d", model.getEnteredValue(TIME_SET) );
     TimeSetText.setWildcard(TimeSetTextBuffer);
     TimeSetText.invalidate();
+    
+    Unicode::snprintf(ElapsedTimeTextBuffer, ELAPSEDTIMETEXT_SIZE, "%04d", model.getEnteredValue(ELAPSED_TIME) );
+    ElapsedTimeText.setWildcard(ElapsedTimeTextBuffer);
+    ElapsedTimeText.invalidate();
+    
+    counter++;
 }
