@@ -31,3 +31,35 @@ EWARM/Panel_V10/Obj/CustomContainer1.o
 
 
 
+*.o
+*.out
+*.o
+*.o
+*.pbi
+*.pbw
+*.browse
+*.pbw
+*.o
+*.pbi
+*.o
+*.pbi
+*.dnx
+*.wsdt
+*.dep
+EWARM/Panel_V10/Exe/Panel_V10.out
+EWARM/Panel_V10/List/Panel_V10.map
+EWARM/Panel_V10/Obj/FrontendApplicationBase.o
+EWARM/Panel_V10/Obj/FrontendApplicationBase.pbi
+EWARM/Panel_V10/Obj/MainScreenPresenter.o
+EWARM/Panel_V10/Obj/MainScreenPresenter.pbi
+EWARM/Panel_V10/Obj/MainScreenView.o
+EWARM/Panel_V10/Obj/MainScreenView.pbi
+EWARM/Panel_V10/Obj/Panel_V10.pbd
+EWARM/Panel_V10/Obj/Panel_V10.pbd.browse
+EWARM/Panel_V10/Obj/Panel_V10.pbw
+EWARM/Panel_V10/Obj/TouchGFXConfiguration.o
+EWARM/Panel_V10/Obj/TouchGFXConfiguration.pbi
+EWARM/Panel_V10/Obj/TouchGFXGeneratedHAL.o
+EWARM/Panel_V10/Obj/TouchGFXGeneratedHAL.pbi
+EWARM/settings/Panel_V10.dnx
+EWARM/settings/Project.wsdt
