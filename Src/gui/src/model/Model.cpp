@@ -151,6 +151,17 @@ void Model::setEnteredValue(uint8_t mode , uint16_t value)
       QuanchtimeValue = value;
       break;
     } 
+  case TIME_SET :
+    {
+      TimeSetValue = value;     
+      break;
+    } 
+
+  case ELAPSED_TIME :
+    {
+      ElapsedTimevalue = value;     
+      break;
+    }  
   }
 }
 
@@ -191,13 +202,13 @@ uint16_t Model::getEnteredValue(uint8_t mode)
 
   case TIME_SET :
     {
-      value = QuanchtimeValue;     
+      value = TimeSetValue;     
       break;
     } 
 
   case ELAPSED_TIME :
     {
-      value = QuanchtimeValue;     
+      value = ElapsedTimevalue;     
       break;
     }     
     

@@ -106,6 +106,15 @@ void MainScreenView::QuanchTimeBtnClicked()
   input_mode = QUANCH_TIME;
 }
 
+void MainScreenView::TimeSetBtnClicked()
+{
+  MainScreenViewBase::TimeSetBtnClicked();
+  
+  keypad1.setVisible(true);
+  keypad1.invalidate();
+  
+  input_mode = TIME_SET;
+}
 
 void MainScreenView::handleTickEvent()
 {
@@ -145,4 +154,8 @@ void MainScreenView::handleTickEvent()
     Unicode::snprintf(QuanchTextBuffer, QUANCHTEXT_SIZE, "%04d", model.getEnteredValue(QUANCH_TIME) );
     QuanchText.setWildcard(QuanchTextBuffer);
     QuanchText.invalidate();
+    
+    Unicode::snprintf(TimeSetTextBuffer, TIMESETTEXT_SIZE, "%04d", model.getEnteredValue(TIME_SET) );
+    TimeSetText.setWildcard(TimeSetTextBuffer);
+    TimeSetText.invalidate();
 }

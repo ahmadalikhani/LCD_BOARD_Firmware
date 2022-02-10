@@ -12,15 +12,15 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <StLinkDriver>
-        <stlinkserialNo>23241487</stlinkserialNo>
-        <stlinkfoundProbes />
-        <stlinkResetStyle>0</stlinkResetStyle>
-        <stlinkResetStrategy>2</stlinkResetStrategy>
         <CStepIntDis>_ 0</CStepIntDis>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <stlinkResetStyle>0</stlinkResetStyle>
+        <stlinkResetStrategy>2</stlinkResetStrategy>
+        <stlinkserialNo>23241487</stlinkserialNo>
+        <stlinkfoundProbes />
     </StLinkDriver>
     <DebugChecksum>
-        <Checksum>938583352</Checksum>
+        <Checksum>998508021</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -102,15 +102,28 @@
         <ShowTimeSum>1</ShowTimeSum>
         <SumSortOrder>0</SumSortOrder>
     </EventLog>
-    <TermIOLog>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ ""</LogFile>
-    </TermIOLog>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Count>0</Count>
+    </Breakpoints2>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
         <Category>_ 0</Category>
     </LogFile>
+    <Aliases>
+        <A0>_ "C:\Users\Ahmad\Desktop\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Middlewares\Third_Party\FreeRTOS\Source\tasks.c" ""</A0>
+        <A1>_ "C:\Users\Ahmad\Desktop\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Src\main.c" "C:\Users\Ahmad\WorkSpace\poshesh haye nano sakhtar\LCD_BOARD_Firmware\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Src\main.c"</A1>
+        <A2>_ "C:\Users\m.mozafari\Desktop\Panel_V.11_LTDC_NEW_4.3_(V10.0+FREERTOS)\EWARM\startup_stm32f429xx.s" ""</A2>
+        <A3>_ "C:\Users\m.mozafari\Desktop\Panel_V.11_LTDC_NEW_4.3_(V10.0+FREERTOS)\Middlewares\ST\touchgfx\framework\include\touchgfx\mixins\FadeAnimator.hpp" ""</A3>
+        <A4>_ "C:\Users\m.mozafari\Desktop\Panel_V.11_LTDC_NEW_4.3_(V10.0+FREERTOS)\Src\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp" ""</A4>
+        <A5>_ "E:\M.Mozaffari\21_Ongoing_Tasks\STM32F429_Panel\Panel_V.11_LTDC_NEW_4.3_(V10.0 + FREERTOS)\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\portasm.s" ""</A5>
+        <A6>_ "E:\M.Mozaffari\21_Ongoing_Tasks\STM32F429_Panel\Panel_V.11_LTDC_NEW_4.3_(V10.0 + FREERTOS)\Src\main.c" ""</A6>
+        <Count>7</Count>
+        <SuppressDialog>1</SuppressDialog>
+    </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>3</Mode>
@@ -124,21 +137,8 @@
     <CallStackStripe>
         <ShowTiming>1</ShowTiming>
     </CallStackStripe>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Count>0</Count>
-    </Breakpoints2>
-    <Aliases>
-        <A0>_ "C:\Users\Ahmad\Desktop\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Middlewares\Third_Party\FreeRTOS\Source\tasks.c" ""</A0>
-        <A1>_ "C:\Users\Ahmad\Desktop\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Src\main.c" "C:\Users\Ahmad\WorkSpace\poshesh haye nano sakhtar\LCD_BOARD_Firmware\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Src\main.c"</A1>
-        <A2>_ "C:\Users\m.mozafari\Desktop\Panel_V.11_LTDC_NEW_4.3_(V10.0+FREERTOS)\EWARM\startup_stm32f429xx.s" ""</A2>
-        <A3>_ "C:\Users\m.mozafari\Desktop\Panel_V.11_LTDC_NEW_4.3_(V10.0+FREERTOS)\Middlewares\ST\touchgfx\framework\include\touchgfx\mixins\FadeAnimator.hpp" ""</A3>
-        <A4>_ "C:\Users\m.mozafari\Desktop\Panel_V.11_LTDC_NEW_4.3_(V10.0+FREERTOS)\Src\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp" ""</A4>
-        <A5>_ "E:\M.Mozaffari\21_Ongoing_Tasks\STM32F429_Panel\Panel_V.11_LTDC_NEW_4.3_(V10.0 + FREERTOS)\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\portasm.s" ""</A5>
-        <A6>_ "E:\M.Mozaffari\21_Ongoing_Tasks\STM32F429_Panel\Panel_V.11_LTDC_NEW_4.3_(V10.0 + FREERTOS)\Src\main.c" ""</A6>
-        <Count>7</Count>
-        <SuppressDialog>1</SuppressDialog>
-    </Aliases>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
 </settings>

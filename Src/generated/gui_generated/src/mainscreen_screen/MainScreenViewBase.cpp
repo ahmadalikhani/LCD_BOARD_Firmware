@@ -1103,9 +1103,12 @@ MainScreenViewBase::MainScreenViewBase() :
     TimeSetButton.setPosition(367, 210, 46, 23);
     TimeSetButton.setAction(flexButtonCallback);
 
-    TimeSetText.setXY(381, 215);
+    TimeSetText.setXY(377, 215);
     TimeSetText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     TimeSetText.setLinespacing(0);
+    Unicode::snprintf(TimeSetTextBuffer, TIMESETTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID124).getText());
+    TimeSetText.setWildcard(TimeSetTextBuffer);
+    TimeSetText.resizeToCurrentText();
     TimeSetText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID13));
 
     ElapsedTimeButton.setBoxWithBorderPosition(0, 0, 43, 23);
@@ -1114,9 +1117,12 @@ MainScreenViewBase::MainScreenViewBase() :
     ElapsedTimeButton.setPosition(298, 210, 43, 23);
     ElapsedTimeButton.setAction(flexButtonCallback);
 
-    ElapsedTimeText.setXY(310, 215);
+    ElapsedTimeText.setXY(307, 215);
     ElapsedTimeText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ElapsedTimeText.setLinespacing(0);
+    Unicode::snprintf(ElapsedTimeTextBuffer, ELAPSEDTIMETEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID125).getText());
+    ElapsedTimeText.setWildcard(ElapsedTimeTextBuffer);
+    ElapsedTimeText.resizeToCurrentText();
     ElapsedTimeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID14));
 
     TimeSet.setXY(368, 194);
@@ -1143,7 +1149,6 @@ MainScreenViewBase::MainScreenViewBase() :
     CalibrationPageButton.setBorderSize(2);
     CalibrationPageButton.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(177, 177, 177), touchgfx::Color::getColorFrom24BitRGB(88, 88, 88), touchgfx::Color::getColorFrom24BitRGB(69, 69, 69), touchgfx::Color::getColorFrom24BitRGB(37, 37, 37));
     CalibrationPageButton.setPosition(288, 243, 170, 29);
-    CalibrationPageButton.setAction(flexButtonCallback);
 
     Sec.setXY(315, 233);
     Sec.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
@@ -1497,13 +1502,6 @@ void MainScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButto
         //When ElapsedTimeButton clicked call virtual function
         //Call ElapsedTimeBtnClicked
         ElapsedTimeBtnClicked();
-    }
-    else if (&src == &CalibrationPageButton)
-    {
-        //Interaction18
-        //When CalibrationPageButton clicked change screen to Screen1
-        //Go to Screen1 with no screen transition
-        application().gotoScreen1ScreenNoTransition();
     }
     else if (&src == &CVLevelButton)
     {

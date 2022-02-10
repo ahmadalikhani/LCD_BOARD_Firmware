@@ -493,10 +493,15 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId124",
+              "UseBuffer": true,
+              "BufferSize": 6
+            },
             "Name": "TimeSetText",
-            "X": 381,
+            "X": 377,
             "Y": 215,
-            "Width": 19,
+            "Width": 26,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -566,10 +571,15 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId125",
+              "UseBuffer": true,
+              "BufferSize": 6
+            },
             "Name": "ElapsedTimeText",
-            "X": 310,
+            "X": 307,
             "Y": 215,
-            "Width": 19,
+            "Width": 26,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -2357,19 +2367,6 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "TimeSetBtnClicked"
-            }
-          },
-          {
-            "InteractionName": "Interaction18",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "CalibrationPageButton"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Screen1"
             }
           }
         ],
@@ -4311,6 +4308,15 @@
         "Y": 0,
         "Width": 240,
         "Height": 240
+      },
+      {
+        "Components": [],
+        "Interactions": [],
+        "Name": "CustomContainer2",
+        "X": 0,
+        "Y": 0,
+        "Width": 250,
+        "Height": 250
       }
     ],
     "TextEntries": [
@@ -4572,6 +4578,14 @@
       },
       {
         "TextEntryId": "SingleUseId123",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId124",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId125",
         "IsResource": false
       }
     ],

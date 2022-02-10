@@ -20,6 +20,8 @@ public:
     virtual void CcLevelBtnClicked();
     virtual void CvLevelBtnClicked();
     virtual void QuanchTimeBtnClicked();
+    virtual void TimeSetBtnClicked();
+    
 protected:
 };
 

@@ -21,9 +21,6 @@ public:
     // MainScreen
     void gotoMainScreenScreenCoverTransitionSouth();
 
-    // Screen1
-    void gotoScreen1ScreenNoTransition();
-
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -34,9 +31,6 @@ protected:
 
     // MainScreen
     void gotoMainScreenScreenCoverTransitionSouthImpl();
-
-    // Screen1
-    void gotoScreen1ScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

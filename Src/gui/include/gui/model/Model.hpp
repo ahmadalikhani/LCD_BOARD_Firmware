@@ -38,7 +38,7 @@ protected:
     uint16_t CcLevelValue;
     uint16_t CvLevelValue;
     uint16_t QuanchtimeValue;
-    uint16_t TimeSerValue;
+    uint16_t TimeSetValue;
     uint16_t ElapsedTimevalue;
 };
 

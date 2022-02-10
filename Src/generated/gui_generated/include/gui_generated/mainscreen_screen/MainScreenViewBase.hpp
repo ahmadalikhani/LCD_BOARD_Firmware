@@ -106,9 +106,9 @@ protected:
     touchgfx::TextArea QuanchTime;
     touchgfx::TextArea StartButtonText;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > TimeSetButton;
-    touchgfx::TextArea TimeSetText;
+    touchgfx::TextAreaWithOneWildcard TimeSetText;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ElapsedTimeButton;
-    touchgfx::TextArea ElapsedTimeText;
+    touchgfx::TextAreaWithOneWildcard ElapsedTimeText;
     touchgfx::TextArea TimeSet;
     touchgfx::TextArea ElapsedTime;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_2;
@@ -168,6 +168,10 @@ protected:
     /*
      * Wildcard Buffers
      */
+    static const uint16_t TIMESETTEXT_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar TimeSetTextBuffer[TIMESETTEXT_SIZE];
+    static const uint16_t ELAPSEDTIMETEXT_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ElapsedTimeTextBuffer[ELAPSEDTIMETEXT_SIZE];
     static const uint16_t CVTEXT_SIZE = 6;
     touchgfx::Unicode::UnicodeChar CVTextBuffer[CVTEXT_SIZE];
     static const uint16_t QUANCHTEXT_SIZE = 6;
