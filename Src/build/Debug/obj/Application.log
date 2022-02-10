@@ -1,0 +1,44 @@
+﻿Build started 2/15/2021 10:13:40 AM.
+     1>Project "C:\Users\m.mozafari\Desktop\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Src\simulator\msvs\Application.vcxproj" on node 2 (Build target(s)).
+     1>GenerateBitmapDatabaseFiles:
+         echo Converting images
+         Converting images
+         "C:\Users\m.mozafari\Desktop\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Middlewares\ST\touchgfx\framework\tools\imageconvert\build\msvs\ImageConvert.exe" -r assets\images -w generated\images
+         Reading ./application.config
+       GenerateTextsAndFontsFiles:
+         echo Converting texts and fonts
+         Converting texts and fonts
+         "F:\TouchGFX\4.16.0\env\MinGW\msys\1.0\ruby193\bin\ruby.exe" "..\..\..\Middlewares\ST\touchgfx\framework\tools\textconvert\main.rb" "..\..\assets\texts\texts.xlsx" "..\..\..\Middlewares\ST\touchgfx\framework\tools\fontconvert\build\win\fontconvert.out" "..\..\generated\fonts" "..\..\generated\texts" "..\..\assets\fonts" "..\.."
+       CompileAllGeneratedFiles:
+         echo Creating compile items for all generated source files: ..\..\generated\fonts\src\ApplicationFontProvider.cpp;..\..\generated\fonts\src\CachedFont.cpp;..\..\generated\fonts\src\FontCache.cpp;..\..\generated\fonts\src\Font_verdana_12_4bpp_0.cpp;..\..\generated\fonts\src\GeneratedFont.cpp;..\..\generated\fonts\src\Kerning_verdana_12_4bpp.cpp;..\..\generated\fonts\src\Table_verdana_12_4bpp.cpp;..\..\generated\fonts\src\UnmappedDataFont.cpp;..\..\generated\images\src\BitmapDatabase.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Round_Edge_icon_button.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Round_Edge_icon_button_pressed.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Round_Edge_small.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Round_Edge_small_pressed.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Round_icon_button.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Square_icon_button.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Square_icon_button_pressed.cpp;..\..\generated\images\src\__designer\image_Dark_Buttons_Round_icon_button.cpp;..\..\generated\texts\src\LanguageGb.cpp;..\..\generated\texts\src\Texts.cpp;..\..\generated\texts\src\TypedTextDatabase.cpp
+         Creating compile items for all generated source files: ..\..\generated\fonts\src\ApplicationFontProvider.cpp;..\..\generated\fonts\src\CachedFont.cpp;..\..\generated\fonts\src\FontCache.cpp;..\..\generated\fonts\src\Font_verdana_12_4bpp_0.cpp;..\..\generated\fonts\src\GeneratedFont.cpp;..\..\generated\fonts\src\Kerning_verdana_12_4bpp.cpp;..\..\generated\fonts\src\Table_verdana_12_4bpp.cpp;..\..\generated\fonts\src\UnmappedDataFont.cpp;..\..\generated\images\src\BitmapDatabase.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Round_Edge_icon_button.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Round_Edge_icon_button_pressed.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Round_Edge_small.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Round_Edge_small_pressed.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Round_icon_button.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Square_icon_button.cpp;..\..\generated\images\src\__designer\image_Blue_Buttons_Square_icon_button_pressed.cpp;..\..\generated\images\src\__designer\image_Dark_Buttons_Round_icon_button.cpp;..\..\generated\texts\src\LanguageGb.cpp;..\..\generated\texts\src\Texts.cpp;..\..\generated\texts\src\TypedTextDatabase.cpp
+       ClCompile:
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\gui\include /I..\..\generated\images\include /I..\..\generated\bitmaps\include /I..\..\generated\fonts\include /I..\..\generated\texts\include /I..\..\generated\gui_generated\include /I..\..\generated\simulator\include /I..\..\..\Middlewares\ST\touchgfx\framework\common\include /I..\..\..\Middlewares\ST\touchgfx\framework\mvp\include /I..\..\..\Middlewares\ST\touchgfx\framework\include\platform\hal\simulator\sdl2\vendor /I..\..\..\Middlewares\ST\touchgfx\framework\include /ZI /nologo /W3 /WX /MP /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D SIMULATOR /D _ITERATOR_DEBUG_LEVEL=0 /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\..\build\Debug\obj\\" /Fd"..\..\build\Debug\obj\vc120.pdb" /Gd /TP /wd4355 /analyze- /errorReport:prompt /DUSE_BPP=16 ..\..\simulator\main.cpp ..\..\generated\simulator\src\mainBase.cpp ..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp ..\..\gui\src\screen1_screen\Screen1Presenter.cpp ..\..\gui\src\screen1_screen\Screen1View.cpp ..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp ..\..\generated\gui_generated\src\screen2_screen\Screen2ViewBase.cpp ..\..\gui\src\screen3_screen\Screen3Presenter.cpp ..\..\gui\src\screen3_screen\Screen3View.cpp ..\..\generated\gui_generated\src\screen3_screen\Screen3ViewBase.cpp ..\..\generated\gui_generated\src\containers\CustomContainer1Base.cpp ..\..\gui\src\screen4_screen\Screen4View.cpp ..\..\generated\fonts\src\ApplicationFontProvider.cpp ..\..\generated\fonts\src\CachedFont.cpp ..\..\generated\fonts\src\FontCache.cpp ..\..\generated\fonts\src\Font_verdana_12_4bpp_0.cpp ..\..\generated\fonts\src\Kerning_verdana_12_4bpp.cpp ..\..\generated\fonts\src\Table_verdana_12_4bpp.cpp ..\..\generated\fonts\src\UnmappedDataFont.cpp ..\..\generated\texts\src\LanguageGb.cpp ..\..\generated\texts\src\Texts.cpp ..\..\generated\texts\src\TypedTextDatabase.cpp
+         main.cpp
+         mainBase.cpp
+         FrontendApplicationBase.cpp
+         Screen1Presenter.cpp
+         Screen1View.cpp
+         Screen1ViewBase.cpp
+         Screen2ViewBase.cpp
+         Screen3Presenter.cpp
+     1>c:\users\m.mozafari\desktop\panel_v.14_ltdc_new_4.3_(v13-modified)\src\gui\src\screen1_screen\screen1view.cpp(2): fatal error C1083: Cannot open include file: 'main.h': No such file or directory
+         Screen3View.cpp
+         Screen3ViewBase.cpp
+         CustomContainer1Base.cpp
+         Screen4View.cpp
+         ApplicationFontProvider.cpp
+         CachedFont.cpp
+         FontCache.cpp
+         Font_verdana_12_4bpp_0.cpp
+         Kerning_verdana_12_4bpp.cpp
+         Table_verdana_12_4bpp.cpp
+         UnmappedDataFont.cpp
+         LanguageGb.cpp
+         Texts.cpp
+         TypedTextDatabase.cpp
+     1>Done Building Project "C:\Users\m.mozafari\Desktop\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Src\simulator\msvs\Application.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:05.00

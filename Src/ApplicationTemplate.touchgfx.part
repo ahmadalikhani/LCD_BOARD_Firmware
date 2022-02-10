@@ -1,0 +1,21 @@
+
+{
+  "Application": {
+    "Name": "Panel_V10",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "AvailableColorDepths": [ 16 ],
+    "AvailableLCDs":
+    {
+      "16": "LCD16bpp"
+    },
+    "AvailableResolutions" : [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PostGenerateTargetCommand" : "touchgfx update_project --project-file=../Panel_V10.ioc --platform=m4",
+    "Family" : "STM32F4"
+  },
+  "Version": "4.16.0"
+}
