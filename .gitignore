@@ -19,3 +19,15 @@ EWARM/Panel_V10/Obj/CustomContainer1.o
 *.cache
 *.txt
 *.cache
+*.xcl
+*.hex
+*.sim
+*.map
+*.linf
+*.browse
+*.pbw
+*.dnx
+*.wsdt
+
+
+
