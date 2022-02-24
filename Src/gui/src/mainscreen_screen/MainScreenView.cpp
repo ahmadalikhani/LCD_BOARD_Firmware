@@ -261,11 +261,26 @@ void MainScreenView::handleTickEvent()
           StopButton.invalidate();
           StopButtonText.invalidate();
         }
+        
+    Unicode::snprintf(VoltageTextBuffer, VOLTAGETEXT_SIZE, "%d", model.getEnteredValue(VOLTAGEGRAPH) );
+    VoltageText.setWildcard(VoltageTextBuffer);
+    VoltageText.invalidate();
+    
+    Unicode::snprintf(CurrentTextBuffer, CURRENTTEXT_SIZE, "%d", model.getEnteredValue(CURRENTGRAPH) );
+    CurrentText.setWildcard(CurrentTextBuffer);
+    CurrentText.invalidate();
+    
+    Unicode::snprintf(PowerTextBuffer, POWERTEXT_SIZE, "%d", model.getEnteredValue(POWERGRAPH) );
+    PowerText.setWildcard(PowerTextBuffer);
+    PowerText.invalidate();
+    
     VoltageGraph.addDataPoint(model.getEnteredValue(VOLTAGEGRAPH));
-    CurrentGraph.addDataPoint(model.getEnteredValue(CURRENTGRAPH));
-    PowerGraph.addDataPoint(model.getEnteredValue(POWERGRAPH));
     VoltageGraph.invalidate();
+        
+    CurrentGraph.addDataPoint(model.getEnteredValue(CURRENTGRAPH));
     CurrentGraph.invalidate();
+    
+    PowerGraph.addDataPoint(model.getEnteredValue(POWERGRAPH));
     PowerGraph.invalidate();
     
     
@@ -282,31 +297,31 @@ void MainScreenView::handleTickEvent()
     counter=0;
     }
     
-    Unicode::snprintf(SetpointTextBuffer, SETPOINTTEXT_SIZE, "%04d", model.getEnteredValue(SET_POINT) );
+    Unicode::snprintf(SetpointTextBuffer, SETPOINTTEXT_SIZE, "%d", model.getEnteredValue(SET_POINT) );
     SetpointText.setWildcard(SetpointTextBuffer);
     SetpointText.invalidate();
     
-    Unicode::snprintf(ARCTextBuffer, ARCTEXT_SIZE, "%04d", model.getEnteredValue(ARC_LEVEL) );
+    Unicode::snprintf(ARCTextBuffer, ARCTEXT_SIZE, "%d", model.getEnteredValue(ARC_LEVEL) );
     ARCText.setWildcard(ARCTextBuffer);
     ARCText.invalidate();
     
-    Unicode::snprintf(CCTextBuffer, CCTEXT_SIZE, "%04d", model.getEnteredValue(CC_LEVEL) );
+    Unicode::snprintf(CCTextBuffer, CCTEXT_SIZE, "%d", model.getEnteredValue(CC_LEVEL) );
     CCText.setWildcard(CCTextBuffer);
     CCText.invalidate();
 
-    Unicode::snprintf(CVTextBuffer, CVTEXT_SIZE, "%04d", model.getEnteredValue(CV_LEVEL) );
+    Unicode::snprintf(CVTextBuffer, CVTEXT_SIZE, "%d", model.getEnteredValue(CV_LEVEL) );
     CVText.setWildcard(CVTextBuffer);
     CVText.invalidate();
 
-    Unicode::snprintf(QuanchTextBuffer, QUANCHTEXT_SIZE, "%04d", model.getEnteredValue(QUANCH_TIME) );
+    Unicode::snprintf(QuanchTextBuffer, QUANCHTEXT_SIZE, "%d", model.getEnteredValue(QUANCH_TIME) );
     QuanchText.setWildcard(QuanchTextBuffer);
     QuanchText.invalidate();
     
-    Unicode::snprintf(TimeSetTextBuffer, TIMESETTEXT_SIZE, "%04d", model.getEnteredValue(TIME_SET) );
+    Unicode::snprintf(TimeSetTextBuffer, TIMESETTEXT_SIZE, "%d", model.getEnteredValue(TIME_SET) );
     TimeSetText.setWildcard(TimeSetTextBuffer);
     TimeSetText.invalidate();
     
-    Unicode::snprintf(ElapsedTimeTextBuffer, ELAPSEDTIMETEXT_SIZE, "%04d", model.getEnteredValue(ELAPSED_TIME) );
+    Unicode::snprintf(ElapsedTimeTextBuffer, ELAPSEDTIMETEXT_SIZE, "%d", model.getEnteredValue(ELAPSED_TIME) );
     ElapsedTimeText.setWildcard(ElapsedTimeTextBuffer);
     ElapsedTimeText.invalidate();
     

@@ -144,7 +144,7 @@ void CustomContainer1::handleTickEvent()
     CustomContainer1Base::handleTickEvent();
     
     
-    Unicode::snprintf(textAreaBuffer, TEXTAREA_SIZE, "%04d", temporary_value);
+    Unicode::snprintf(textAreaBuffer, TEXTAREA_SIZE, "%d", temporary_value);
     textArea.setWildcard(textAreaBuffer);
     textArea.invalidate();
 }

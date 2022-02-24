@@ -263,12 +263,11 @@ CustomContainer1Base::CustomContainer1Base() :
     MinusText.setLinespacing(0);
     MinusText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID116));
 
-    textArea.setXY(5, 40);
+    textArea.setPosition(5, 36, 182, 25);
     textArea.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     textArea.setLinespacing(0);
     Unicode::snprintf(textAreaBuffer, TEXTAREA_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID118).getText());
     textArea.setWildcard(textAreaBuffer);
-    textArea.resizeToCurrentText();
     textArea.setTypedText(touchgfx::TypedText(T_SINGLEUSEID117));
 
     add(BG);

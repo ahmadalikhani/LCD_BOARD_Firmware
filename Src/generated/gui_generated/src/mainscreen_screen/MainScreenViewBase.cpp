@@ -192,12 +192,11 @@ MainScreenViewBase::MainScreenViewBase() :
     TimeSetButton.setPosition(367, 210, 46, 23);
     TimeSetButton.setAction(flexButtonCallback);
 
-    TimeSetText.setXY(377, 215);
+    TimeSetText.setPosition(370, 215, 41, 13);
     TimeSetText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     TimeSetText.setLinespacing(0);
     Unicode::snprintf(TimeSetTextBuffer, TIMESETTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID124).getText());
     TimeSetText.setWildcard(TimeSetTextBuffer);
-    TimeSetText.resizeToCurrentText();
     TimeSetText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID13));
 
     ElapsedTimeButton.setBoxWithBorderPosition(0, 0, 43, 23);
@@ -206,12 +205,11 @@ MainScreenViewBase::MainScreenViewBase() :
     ElapsedTimeButton.setPosition(298, 210, 43, 23);
     ElapsedTimeButton.setAction(flexButtonCallback);
 
-    ElapsedTimeText.setXY(307, 215);
+    ElapsedTimeText.setPosition(299, 215, 41, 13);
     ElapsedTimeText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ElapsedTimeText.setLinespacing(0);
     Unicode::snprintf(ElapsedTimeTextBuffer, ELAPSEDTIMETEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID125).getText());
     ElapsedTimeText.setWildcard(ElapsedTimeTextBuffer);
-    ElapsedTimeText.resizeToCurrentText();
     ElapsedTimeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID14));
 
     TimeSet.setXY(368, 194);
@@ -270,12 +268,11 @@ MainScreenViewBase::MainScreenViewBase() :
     CVLevelButton.setPosition(430, 136, 50, 28);
     CVLevelButton.setAction(flexButtonCallback);
 
-    CVText.setXY(442, 144);
+    CVText.setPosition(435, 144, 41, 13);
     CVText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     CVText.setLinespacing(0);
     Unicode::snprintf(CVTextBuffer, CVTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID122).getText());
     CVText.setWildcard(CVTextBuffer);
-    CVText.resizeToCurrentText();
     CVText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID22));
 
     QuanchTimeButton.setBoxWithBorderPosition(0, 0, 50, 27);
@@ -284,12 +281,11 @@ MainScreenViewBase::MainScreenViewBase() :
     QuanchTimeButton.setPosition(430, 166, 50, 27);
     QuanchTimeButton.setAction(flexButtonCallback);
 
-    QuanchText.setXY(442, 173);
+    QuanchText.setPosition(435, 173, 41, 13);
     QuanchText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     QuanchText.setLinespacing(0);
     Unicode::snprintf(QuanchTextBuffer, QUANCHTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID161).getText());
     QuanchText.setWildcard(QuanchTextBuffer);
-    QuanchText.resizeToCurrentText();
     QuanchText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID23));
 
     CCLevelButton.setBoxWithBorderPosition(0, 0, 50, 28);
@@ -298,12 +294,11 @@ MainScreenViewBase::MainScreenViewBase() :
     CCLevelButton.setPosition(430, 106, 50, 28);
     CCLevelButton.setAction(flexButtonCallback);
 
-    CCText.setXY(442, 114);
+    CCText.setPosition(436, 114, 41, 13);
     CCText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     CCText.setLinespacing(0);
     Unicode::snprintf(CCTextBuffer, CCTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID121).getText());
     CCText.setWildcard(CCTextBuffer);
-    CCText.resizeToCurrentText();
     CCText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID24));
 
     ARCLevelButton.setBoxWithBorderPosition(0, 0, 50, 28);
@@ -312,12 +307,11 @@ MainScreenViewBase::MainScreenViewBase() :
     ARCLevelButton.setPosition(430, 76, 50, 28);
     ARCLevelButton.setAction(flexButtonCallback);
 
-    ARCText.setXY(442, 84);
+    ARCText.setPosition(435, 84, 41, 13);
     ARCText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ARCText.setLinespacing(0);
     Unicode::snprintf(ARCTextBuffer, ARCTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID120).getText());
     ARCText.setWildcard(ARCTextBuffer);
-    ARCText.resizeToCurrentText();
     ARCText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID25));
 
     SetpointButton.setBoxWithBorderPosition(0, 0, 50, 28);
@@ -326,12 +320,11 @@ MainScreenViewBase::MainScreenViewBase() :
     SetpointButton.setPosition(430, 46, 50, 28);
     SetpointButton.setAction(flexButtonCallback);
 
-    SetpointText.setXY(442, 54);
+    SetpointText.setPosition(435, 54, 41, 13);
     SetpointText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     SetpointText.setLinespacing(0);
     Unicode::snprintf(SetpointTextBuffer, SETPOINTTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID119).getText());
     SetpointText.setWildcard(SetpointTextBuffer);
-    SetpointText.resizeToCurrentText();
     SetpointText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID26));
 
     CalibrationButtonText.setXY(335, 251);
@@ -344,9 +337,11 @@ MainScreenViewBase::MainScreenViewBase() :
     VoltageBox.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(20, 151, 197), touchgfx::Color::getColorFrom24BitRGB(20, 151, 197));
     VoltageBox.setPosition(1, 17, 50, 25);
 
-    VoltageText.setXY(17, 23);
+    VoltageText.setPosition(6, 23, 41, 13);
     VoltageText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     VoltageText.setLinespacing(0);
+    Unicode::snprintf(VoltageTextBuffer, VOLTAGETEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID164).getText());
+    VoltageText.setWildcard(VoltageTextBuffer);
     VoltageText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID29));
 
     CurrentBox.setBoxWithBorderPosition(0, 0, 50, 25);
@@ -354,9 +349,11 @@ MainScreenViewBase::MainScreenViewBase() :
     CurrentBox.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 47, 0), touchgfx::Color::getColorFrom24BitRGB(255, 47, 0));
     CurrentBox.setPosition(117, 17, 50, 25);
 
-    CurrentText.setXY(133, 23);
+    CurrentText.setPosition(121, 23, 41, 13);
     CurrentText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     CurrentText.setLinespacing(0);
+    Unicode::snprintf(CurrentTextBuffer, CURRENTTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID165).getText());
+    CurrentText.setWildcard(CurrentTextBuffer);
     CurrentText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID30));
 
     PowerBox.setBoxWithBorderPosition(0, 0, 50, 25);
@@ -364,9 +361,11 @@ MainScreenViewBase::MainScreenViewBase() :
     PowerBox.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(26, 255, 0), touchgfx::Color::getColorFrom24BitRGB(26, 255, 0));
     PowerBox.setPosition(238, 17, 50, 25);
 
-    PowerText.setXY(254, 23);
+    PowerText.setPosition(243, 23, 41, 13);
     PowerText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     PowerText.setLinespacing(0);
+    Unicode::snprintf(PowerTextBuffer, POWERTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID166).getText());
+    PowerText.setWildcard(PowerTextBuffer);
     PowerText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID31));
 
     VoltageTitle.setXY(1, 1);

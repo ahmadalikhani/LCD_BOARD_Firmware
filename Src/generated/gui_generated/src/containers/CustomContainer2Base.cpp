@@ -22,12 +22,11 @@ CustomContainer2Base::CustomContainer2Base() :
     ParameterBtn1.setPosition(196, 87, 50, 27);
     ParameterBtn1.setAction(flexButtonCallback);
 
-    ParameterText1.setXY(208, 94);
+    ParameterText1.setPosition(201, 94, 41, 13);
     ParameterText1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ParameterText1.setLinespacing(0);
     Unicode::snprintf(ParameterText1Buffer, PARAMETERTEXT1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID127).getText());
     ParameterText1.setWildcard(ParameterText1Buffer);
-    ParameterText1.resizeToCurrentText();
     ParameterText1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID126));
 
     ParameterBtn2.setBoxWithBorderPosition(0, 0, 50, 27);
@@ -36,12 +35,11 @@ CustomContainer2Base::CustomContainer2Base() :
     ParameterBtn2.setPosition(196, 116, 50, 27);
     ParameterBtn2.setAction(flexButtonCallback);
 
-    ParameterText2.setXY(208, 123);
+    ParameterText2.setPosition(201, 123, 41, 13);
     ParameterText2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ParameterText2.setLinespacing(0);
     Unicode::snprintf(ParameterText2Buffer, PARAMETERTEXT2_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID129).getText());
     ParameterText2.setWildcard(ParameterText2Buffer);
-    ParameterText2.resizeToCurrentText();
     ParameterText2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID128));
 
     ParameterBtn3.setBoxWithBorderPosition(0, 0, 50, 27);
@@ -50,12 +48,11 @@ CustomContainer2Base::CustomContainer2Base() :
     ParameterBtn3.setPosition(196, 146, 50, 27);
     ParameterBtn3.setAction(flexButtonCallback);
 
-    ParameterText3.setXY(208, 153);
+    ParameterText3.setPosition(201, 153, 41, 13);
     ParameterText3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ParameterText3.setLinespacing(0);
     Unicode::snprintf(ParameterText3Buffer, PARAMETERTEXT3_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID131).getText());
     ParameterText3.setWildcard(ParameterText3Buffer);
-    ParameterText3.resizeToCurrentText();
     ParameterText3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID130));
 
     ParameterBtn4.setBoxWithBorderPosition(0, 0, 50, 27);
@@ -64,12 +61,11 @@ CustomContainer2Base::CustomContainer2Base() :
     ParameterBtn4.setPosition(196, 175, 50, 27);
     ParameterBtn4.setAction(flexButtonCallback);
 
-    ParameterText4.setXY(208, 182);
+    ParameterText4.setPosition(201, 182, 41, 13);
     ParameterText4.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ParameterText4.setLinespacing(0);
     Unicode::snprintf(ParameterText4Buffer, PARAMETERTEXT4_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID133).getText());
     ParameterText4.setWildcard(ParameterText4Buffer);
-    ParameterText4.resizeToCurrentText();
     ParameterText4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID132));
 
     ParameterBtn5.setBoxWithBorderPosition(0, 0, 50, 27);
@@ -78,12 +74,11 @@ CustomContainer2Base::CustomContainer2Base() :
     ParameterBtn5.setPosition(196, 204, 50, 27);
     ParameterBtn5.setAction(flexButtonCallback);
 
-    ParameterText5.setXY(208, 211);
+    ParameterText5.setPosition(201, 211, 41, 13);
     ParameterText5.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ParameterText5.setLinespacing(0);
     Unicode::snprintf(ParameterText5Buffer, PARAMETERTEXT5_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID135).getText());
     ParameterText5.setWildcard(ParameterText5Buffer);
-    ParameterText5.resizeToCurrentText();
     ParameterText5.setTypedText(touchgfx::TypedText(T_SINGLEUSEID134));
 
     ParameterBtn6.setBoxWithBorderPosition(0, 0, 50, 27);
@@ -92,12 +87,11 @@ CustomContainer2Base::CustomContainer2Base() :
     ParameterBtn6.setPosition(347, 87, 50, 27);
     ParameterBtn6.setAction(flexButtonCallback);
 
-    ParameterText6.setXY(359, 94);
+    ParameterText6.setPosition(352, 94, 41, 13);
     ParameterText6.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ParameterText6.setLinespacing(0);
     Unicode::snprintf(ParameterText6Buffer, PARAMETERTEXT6_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID137).getText());
     ParameterText6.setWildcard(ParameterText6Buffer);
-    ParameterText6.resizeToCurrentText();
     ParameterText6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID136));
 
     ParameterBtn7.setBoxWithBorderPosition(0, 0, 50, 27);
@@ -106,12 +100,11 @@ CustomContainer2Base::CustomContainer2Base() :
     ParameterBtn7.setPosition(347, 116, 50, 27);
     ParameterBtn7.setAction(flexButtonCallback);
 
-    ParameterText7.setXY(359, 123);
+    ParameterText7.setPosition(352, 123, 41, 13);
     ParameterText7.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ParameterText7.setLinespacing(0);
     Unicode::snprintf(ParameterText7Buffer, PARAMETERTEXT7_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID139).getText());
     ParameterText7.setWildcard(ParameterText7Buffer);
-    ParameterText7.resizeToCurrentText();
     ParameterText7.setTypedText(touchgfx::TypedText(T_SINGLEUSEID138));
 
     ParameterBtn8.setBoxWithBorderPosition(0, 0, 50, 27);
@@ -120,12 +113,11 @@ CustomContainer2Base::CustomContainer2Base() :
     ParameterBtn8.setPosition(347, 146, 50, 27);
     ParameterBtn8.setAction(flexButtonCallback);
 
-    ParameterText8.setXY(359, 153);
+    ParameterText8.setPosition(352, 153, 41, 13);
     ParameterText8.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ParameterText8.setLinespacing(0);
     Unicode::snprintf(ParameterText8Buffer, PARAMETERTEXT8_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID141).getText());
     ParameterText8.setWildcard(ParameterText8Buffer);
-    ParameterText8.resizeToCurrentText();
     ParameterText8.setTypedText(touchgfx::TypedText(T_SINGLEUSEID140));
 
     ParameterBtn9.setBoxWithBorderPosition(0, 0, 50, 27);
@@ -134,12 +126,11 @@ CustomContainer2Base::CustomContainer2Base() :
     ParameterBtn9.setPosition(347, 175, 50, 27);
     ParameterBtn9.setAction(flexButtonCallback);
 
-    ParameterText9.setXY(359, 182);
+    ParameterText9.setPosition(352, 182, 41, 13);
     ParameterText9.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ParameterText9.setLinespacing(0);
-    Unicode::snprintf(ParameterText9Buffer, PARAMETERTEXT9_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID143).getText());
+    Unicode::snprintf(ParameterText9Buffer, PARAMETERTEXT9_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID168).getText());
     ParameterText9.setWildcard(ParameterText9Buffer);
-    ParameterText9.resizeToCurrentText();
     ParameterText9.setTypedText(touchgfx::TypedText(T_SINGLEUSEID142));
 
     ParameterBtn10.setBoxWithBorderPosition(0, 0, 50, 27);
@@ -148,12 +139,11 @@ CustomContainer2Base::CustomContainer2Base() :
     ParameterBtn10.setPosition(347, 204, 50, 27);
     ParameterBtn10.setAction(flexButtonCallback);
 
-    ParameterText10.setXY(359, 211);
+    ParameterText10.setPosition(352, 211, 41, 13);
     ParameterText10.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     ParameterText10.setLinespacing(0);
-    Unicode::snprintf(ParameterText10Buffer, PARAMETERTEXT10_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID145).getText());
+    Unicode::snprintf(ParameterText10Buffer, PARAMETERTEXT10_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID167).getText());
     ParameterText10.setWildcard(ParameterText10Buffer);
-    ParameterText10.resizeToCurrentText();
     ParameterText10.setTypedText(touchgfx::TypedText(T_SINGLEUSEID144));
 
     Parameter1.setXY(102, 91);

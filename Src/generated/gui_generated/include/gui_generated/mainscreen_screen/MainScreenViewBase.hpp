@@ -172,11 +172,11 @@ protected:
     touchgfx::TextAreaWithOneWildcard SetpointText;
     touchgfx::TextArea CalibrationButtonText;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > VoltageBox;
-    touchgfx::TextArea VoltageText;
+    touchgfx::TextAreaWithOneWildcard VoltageText;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > CurrentBox;
-    touchgfx::TextArea CurrentText;
+    touchgfx::TextAreaWithOneWildcard CurrentText;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > PowerBox;
-    touchgfx::TextArea PowerText;
+    touchgfx::TextAreaWithOneWildcard PowerText;
     touchgfx::TextArea VoltageTitle;
     touchgfx::TextArea CurrentTitle;
     touchgfx::TextArea PowerTitle;
@@ -227,6 +227,12 @@ protected:
     touchgfx::Unicode::UnicodeChar ARCTextBuffer[ARCTEXT_SIZE];
     static const uint16_t SETPOINTTEXT_SIZE = 6;
     touchgfx::Unicode::UnicodeChar SetpointTextBuffer[SETPOINTTEXT_SIZE];
+    static const uint16_t VOLTAGETEXT_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar VoltageTextBuffer[VOLTAGETEXT_SIZE];
+    static const uint16_t CURRENTTEXT_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar CurrentTextBuffer[CURRENTTEXT_SIZE];
+    static const uint16_t POWERTEXT_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar PowerTextBuffer[POWERTEXT_SIZE];
 
 private:
 

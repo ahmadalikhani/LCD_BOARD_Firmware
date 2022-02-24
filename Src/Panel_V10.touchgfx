@@ -764,7 +764,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId124",
@@ -772,9 +772,9 @@
               "BufferSize": 6
             },
             "Name": "TimeSetText",
-            "X": 377,
+            "X": 370,
             "Y": 215,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -842,7 +842,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId125",
@@ -850,9 +850,9 @@
               "BufferSize": 6
             },
             "Name": "ElapsedTimeText",
-            "X": 307,
+            "X": 299,
             "Y": 215,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -1211,7 +1211,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId122",
@@ -1219,9 +1219,9 @@
               "BufferSize": 6
             },
             "Name": "CVText",
-            "X": 442,
+            "X": 435,
             "Y": 144,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -1289,7 +1289,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId161",
@@ -1297,9 +1297,9 @@
               "BufferSize": 6
             },
             "Name": "QuanchText",
-            "X": 442,
+            "X": 435,
             "Y": 173,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -1367,7 +1367,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId121",
@@ -1375,9 +1375,9 @@
               "BufferSize": 6
             },
             "Name": "CCText",
-            "X": 442,
+            "X": 436,
             "Y": 114,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -1445,7 +1445,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId120",
@@ -1453,9 +1453,9 @@
               "BufferSize": 6
             },
             "Name": "ARCText",
-            "X": 442,
+            "X": 435,
             "Y": 84,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -1523,7 +1523,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId119",
@@ -1531,9 +1531,9 @@
               "BufferSize": 6
             },
             "Name": "SetpointText",
-            "X": 442,
+            "X": 435,
             "Y": 54,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -1625,12 +1625,17 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId164",
+              "UseBuffer": true,
+              "BufferSize": 6
+            },
             "Name": "VoltageText",
-            "X": 17,
+            "X": 6,
             "Y": 23,
-            "Width": 19,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -1698,12 +1703,17 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId165",
+              "UseBuffer": true,
+              "BufferSize": 6
+            },
             "Name": "CurrentText",
-            "X": 133,
+            "X": 121,
             "Y": 23,
-            "Width": 19,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -1771,12 +1781,17 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId166",
+              "UseBuffer": true,
+              "BufferSize": 6
+            },
             "Name": "PowerText",
-            "X": 254,
+            "X": 243,
             "Y": 23,
-            "Width": 19,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -4498,7 +4513,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId118",
@@ -4507,8 +4522,8 @@
             },
             "Name": "textArea",
             "X": 5,
-            "Y": 40,
-            "Width": 51,
+            "Y": 36,
+            "Width": 182,
             "Height": 25,
             "Visible": true,
             "LockPosition": false,
@@ -4831,7 +4846,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId127",
@@ -4839,9 +4854,9 @@
               "BufferSize": 6
             },
             "Name": "ParameterText1",
-            "X": 208,
+            "X": 201,
             "Y": 94,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -4909,7 +4924,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId129",
@@ -4917,9 +4932,9 @@
               "BufferSize": 6
             },
             "Name": "ParameterText2",
-            "X": 208,
+            "X": 201,
             "Y": 123,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -4987,7 +5002,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId131",
@@ -4995,9 +5010,9 @@
               "BufferSize": 6
             },
             "Name": "ParameterText3",
-            "X": 208,
+            "X": 201,
             "Y": 153,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -5065,7 +5080,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId133",
@@ -5073,9 +5088,9 @@
               "BufferSize": 6
             },
             "Name": "ParameterText4",
-            "X": 208,
+            "X": 201,
             "Y": 182,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -5143,7 +5158,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId135",
@@ -5151,9 +5166,9 @@
               "BufferSize": 6
             },
             "Name": "ParameterText5",
-            "X": 208,
+            "X": 201,
             "Y": 211,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -5221,7 +5236,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId137",
@@ -5229,9 +5244,9 @@
               "BufferSize": 6
             },
             "Name": "ParameterText6",
-            "X": 359,
+            "X": 352,
             "Y": 94,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -5299,7 +5314,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId139",
@@ -5307,9 +5322,9 @@
               "BufferSize": 6
             },
             "Name": "ParameterText7",
-            "X": 359,
+            "X": 352,
             "Y": 123,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -5377,7 +5392,7 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId141",
@@ -5385,9 +5400,9 @@
               "BufferSize": 6
             },
             "Name": "ParameterText8",
-            "X": 359,
+            "X": 352,
             "Y": 153,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -5455,17 +5470,17 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
-              "TextId": "SingleUseId143",
+              "TextId": "SingleUseId168",
               "UseBuffer": true,
               "BufferSize": 6
             },
             "Name": "ParameterText9",
-            "X": 359,
+            "X": 352,
             "Y": 182,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -5533,17 +5548,17 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
-              "TextId": "SingleUseId145",
+              "TextId": "SingleUseId167",
               "UseBuffer": true,
               "BufferSize": 6
             },
             "Name": "ParameterText10",
-            "X": 359,
+            "X": 352,
             "Y": 211,
-            "Width": 26,
+            "Width": 41,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -6395,15 +6410,7 @@
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId143",
-        "IsResource": false
-      },
-      {
         "TextEntryId": "SingleUseId144",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId145",
         "IsResource": false
       },
       {
@@ -6476,6 +6483,26 @@
       },
       {
         "TextEntryId": "SingleUseId163",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId164",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId165",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId166",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId167",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId168",
         "IsResource": false
       }
     ],

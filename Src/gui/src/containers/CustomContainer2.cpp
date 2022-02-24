@@ -120,43 +120,43 @@ void CustomContainer2::handleTickEvent()
 {
     CustomContainer2Base::handleTickEvent();
     
-    Unicode::snprintf(ParameterText1Buffer, PARAMETERTEXT1_SIZE, "%04d", model.getEnteredValue(PARAMETER1));
+    Unicode::snprintf(ParameterText1Buffer, PARAMETERTEXT1_SIZE, "%d", model.getEnteredValue(PARAMETER1));
     ParameterText1.setWildcard(ParameterText1Buffer);
     ParameterText1.invalidate();
     
-    Unicode::snprintf(ParameterText2Buffer, PARAMETERTEXT2_SIZE, "%04d", model.getEnteredValue(PARAMETER2));
+    Unicode::snprintf(ParameterText2Buffer, PARAMETERTEXT2_SIZE, "%d", model.getEnteredValue(PARAMETER2));
     ParameterText2.setWildcard(ParameterText2Buffer);
     ParameterText2.invalidate();
     
-    Unicode::snprintf(ParameterText3Buffer, PARAMETERTEXT3_SIZE, "%04d", model.getEnteredValue(PARAMETER3));
+    Unicode::snprintf(ParameterText3Buffer, PARAMETERTEXT3_SIZE, "%d", model.getEnteredValue(PARAMETER3));
     ParameterText3.setWildcard(ParameterText3Buffer);
     ParameterText3.invalidate();
     
-    Unicode::snprintf(ParameterText4Buffer, PARAMETERTEXT4_SIZE, "%04d", model.getEnteredValue(PARAMETER4));
+    Unicode::snprintf(ParameterText4Buffer, PARAMETERTEXT4_SIZE, "%d", model.getEnteredValue(PARAMETER4));
     ParameterText4.setWildcard(ParameterText4Buffer);
     ParameterText4.invalidate();
     
-    Unicode::snprintf(ParameterText5Buffer, PARAMETERTEXT5_SIZE, "%04d", model.getEnteredValue(PARAMETER5));
+    Unicode::snprintf(ParameterText5Buffer, PARAMETERTEXT5_SIZE, "%d", model.getEnteredValue(PARAMETER5));
     ParameterText5.setWildcard(ParameterText5Buffer);
     ParameterText5.invalidate();
     
-    Unicode::snprintf(ParameterText6Buffer, PARAMETERTEXT6_SIZE, "%04d", model.getEnteredValue(PARAMETER6));
+    Unicode::snprintf(ParameterText6Buffer, PARAMETERTEXT6_SIZE, "%d", model.getEnteredValue(PARAMETER6));
     ParameterText6.setWildcard(ParameterText6Buffer);
     ParameterText6.invalidate();
     
-    Unicode::snprintf(ParameterText7Buffer, PARAMETERTEXT7_SIZE, "%04d", model.getEnteredValue(PARAMETER7));
+    Unicode::snprintf(ParameterText7Buffer, PARAMETERTEXT7_SIZE, "%d", model.getEnteredValue(PARAMETER7));
     ParameterText7.setWildcard(ParameterText7Buffer);
     ParameterText7.invalidate();
     
-    Unicode::snprintf(ParameterText8Buffer, PARAMETERTEXT8_SIZE, "%04d", model.getEnteredValue(PARAMETER8));
+    Unicode::snprintf(ParameterText8Buffer, PARAMETERTEXT8_SIZE, "%d", model.getEnteredValue(PARAMETER8));
     ParameterText8.setWildcard(ParameterText8Buffer);
     ParameterText8.invalidate();
     
-    Unicode::snprintf(ParameterText9Buffer, PARAMETERTEXT9_SIZE, "%04d", model.getEnteredValue(PARAMETER9));
+    Unicode::snprintf(ParameterText9Buffer, PARAMETERTEXT9_SIZE, "%d", model.getEnteredValue(PARAMETER9));
     ParameterText9.setWildcard(ParameterText9Buffer);
     ParameterText9.invalidate();
     
-    Unicode::snprintf(ParameterText10Buffer, PARAMETERTEXT10_SIZE, "%04d", model.getEnteredValue(PARAMETER10));
+    Unicode::snprintf(ParameterText10Buffer, PARAMETERTEXT10_SIZE, "%d", model.getEnteredValue(PARAMETER10));
     ParameterText10.setWildcard(ParameterText10Buffer);
     ParameterText10.invalidate();
 
