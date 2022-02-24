@@ -24,6 +24,8 @@ public:
     virtual void CalibrationPageBtnClicked();
     virtual void StartBtnClicked();
     virtual void StopBtnClicked();
+    virtual void TimeModeBtnPressed();
+    virtual void InfiniteModeBtnPressed();
     
 protected:
 };

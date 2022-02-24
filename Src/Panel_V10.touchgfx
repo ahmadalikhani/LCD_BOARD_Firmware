@@ -946,12 +946,85 @@
                 }
               }
             ],
-            "Name": "flexButton1_2",
+            "Name": "TimeModeBtn",
+            "X": 433,
+            "Y": 198,
+            "Width": 44,
+            "Height": 43,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "FlexButton",
+            "Alpha": 255,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 44,
+                "Height": 43,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 3,
+                "ColorReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 0,
+                  "Blue": 0
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 31,
+                  "Blue": 0
+                }
+              }
+            ],
+            "Name": "InfiniteModeBtn",
             "X": 433,
             "Y": 198,
             "Width": 44,
             "Height": 43,
             "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId163",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "TimeModeText",
+            "X": 440,
+            "Y": 206,
+            "Width": 30,
+            "Height": 26,
+            "Visible": false,
             "LockPosition": false,
             "Draggable": false,
             "Clickable": false,
@@ -970,10 +1043,10 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Name": "TimeModeText",
-            "X": 440,
+            "Name": "InfiniteModeText",
+            "X": 437,
             "Y": 206,
-            "Width": 30,
+            "Width": 36,
             "Height": 26,
             "Visible": true,
             "LockPosition": false,
@@ -2691,6 +2764,30 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "StopBtnClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction21",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "TimeModeBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TimeModeBtnPressed"
+            }
+          },
+          {
+            "InteractionName": "Interaction22",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "InfiniteModeBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "InfiniteModeBtnPressed"
             }
           }
         ],
@@ -6375,6 +6472,10 @@
       },
       {
         "TextEntryId": "SingleUseId162",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId163",
         "IsResource": false
       }
     ],

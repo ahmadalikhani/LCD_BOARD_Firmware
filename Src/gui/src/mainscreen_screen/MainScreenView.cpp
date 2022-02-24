@@ -162,6 +162,38 @@ void MainScreenView::StopBtnClicked()
   StopButtonText.invalidate();  
 }
 
+void MainScreenView::TimeModeBtnPressed()
+{
+  MainScreenViewBase::TimeModeBtnPressed(); 
+  
+  InfiniteModeBtn.setVisible(true);
+  InfiniteModeText.setVisible(true);
+  TimeModeBtn.setVisible(false);
+  TimeModeText.setVisible(false);
+  InfiniteModeBtn.invalidate();
+  InfiniteModeText.invalidate();
+  TimeModeBtn.invalidate();
+  TimeModeText.invalidate();
+    
+  model.setTimeMode(INFINITE_MODE);
+}
+
+void MainScreenView::InfiniteModeBtnPressed()
+{
+  MainScreenViewBase::InfiniteModeBtnPressed(); 
+  
+  InfiniteModeBtn.setVisible(false);
+  InfiniteModeText.setVisible(false);
+  TimeModeBtn.setVisible(true);
+  TimeModeText.setVisible(true);
+  InfiniteModeBtn.invalidate();
+  InfiniteModeText.invalidate();
+  TimeModeBtn.invalidate();
+  TimeModeText.invalidate();
+  
+  model.setTimeMode(TIME_MODE);
+}
+
 void MainScreenView::handleTickEvent()
 {
   bool btnMode=0;
@@ -206,15 +238,8 @@ void MainScreenView::handleTickEvent()
         
         if(model.checkBtnPressed(START_BUTTON))
         {
-          if(model.getEnteredValue(TIME_SET) > 0) // in next step change dependencies to time mode Btn
-          {
+          if(model.getEnteredValue(TIME_SET) > 0 && model.getTimeMode(TIME_MODE)) // in next step change dependencies to time mode Btn
             end_time = model.getEnteredValue(TIME_SET);
-            model.setTimeMode(TIME_MODE);
-          }          
-          else
-          {
-            model.setTimeMode(INFINITE_MODE);
-          }
         }
         
         if((model.getTimeMode(TIME_MODE) && end_time - elapsed_time > 0 && !model.checkBtnPressed(STOP_BUTTON) ) ||
@@ -224,6 +249,7 @@ void MainScreenView::handleTickEvent()
         }
         else{
           model.setEnteredValue(ELAPSED_TIME , 0);
+          model.setBtnPressed(STOP_BUTTON);
           end_time = 0;
           
           StopButtonText.setVisible(false);
@@ -285,4 +311,5 @@ void MainScreenView::handleTickEvent()
     ElapsedTimeText.invalidate();
     
     counter++;
+    
 }

@@ -96,6 +96,16 @@ public:
         // Override and implement this function in MainScreen
     }
 
+    virtual void TimeModeBtnPressed()
+    {
+        // Override and implement this function in MainScreen
+    }
+
+    virtual void InfiniteModeBtnPressed()
+    {
+        // Override and implement this function in MainScreen
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -143,8 +153,10 @@ protected:
     touchgfx::TextAreaWithOneWildcard ElapsedTimeText;
     touchgfx::TextArea TimeSet;
     touchgfx::TextArea ElapsedTime;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_2;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > TimeModeBtn;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > InfiniteModeBtn;
     touchgfx::TextArea TimeModeText;
+    touchgfx::TextArea InfiniteModeText;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > CalibrationPageButton;
     touchgfx::TextArea Sec;
     touchgfx::TextArea Sec_1;

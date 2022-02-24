@@ -224,15 +224,29 @@ MainScreenViewBase::MainScreenViewBase() :
     ElapsedTime.setLinespacing(0);
     ElapsedTime.setTypedText(touchgfx::TypedText(T_SINGLEUSEID16));
 
-    flexButton1_2.setBoxWithBorderPosition(0, 0, 44, 43);
-    flexButton1_2.setBorderSize(3);
-    flexButton1_2.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    flexButton1_2.setPosition(433, 198, 44, 43);
+    TimeModeBtn.setBoxWithBorderPosition(0, 0, 44, 43);
+    TimeModeBtn.setBorderSize(3);
+    TimeModeBtn.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    TimeModeBtn.setPosition(433, 198, 44, 43);
+    TimeModeBtn.setVisible(false);
+    TimeModeBtn.setAction(flexButtonCallback);
+
+    InfiniteModeBtn.setBoxWithBorderPosition(0, 0, 44, 43);
+    InfiniteModeBtn.setBorderSize(3);
+    InfiniteModeBtn.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 0, 0), touchgfx::Color::getColorFrom24BitRGB(255, 31, 0));
+    InfiniteModeBtn.setPosition(433, 198, 44, 43);
+    InfiniteModeBtn.setAction(flexButtonCallback);
 
     TimeModeText.setXY(440, 206);
+    TimeModeText.setVisible(false);
     TimeModeText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     TimeModeText.setLinespacing(0);
-    TimeModeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID17));
+    TimeModeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID163));
+
+    InfiniteModeText.setXY(437, 206);
+    InfiniteModeText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    InfiniteModeText.setLinespacing(0);
+    InfiniteModeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID17));
 
     CalibrationPageButton.setBoxWithBorderPosition(0, 0, 170, 29);
     CalibrationPageButton.setBorderSize(2);
@@ -536,8 +550,10 @@ MainScreenViewBase::MainScreenViewBase() :
     add(ElapsedTimeText);
     add(TimeSet);
     add(ElapsedTime);
-    add(flexButton1_2);
+    add(TimeModeBtn);
+    add(InfiniteModeBtn);
     add(TimeModeText);
+    add(InfiniteModeText);
     add(CalibrationPageButton);
     add(Sec);
     add(Sec_1);
@@ -615,6 +631,20 @@ void MainScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButto
         //When ElapsedTimeButton clicked call virtual function
         //Call ElapsedTimeBtnClicked
         ElapsedTimeBtnClicked();
+    }
+    else if (&src == &TimeModeBtn)
+    {
+        //Interaction21
+        //When TimeModeBtn clicked call virtual function
+        //Call TimeModeBtnPressed
+        TimeModeBtnPressed();
+    }
+    else if (&src == &InfiniteModeBtn)
+    {
+        //Interaction22
+        //When InfiniteModeBtn clicked call virtual function
+        //Call InfiniteModeBtnPressed
+        InfiniteModeBtnPressed();
     }
     else if (&src == &CalibrationPageButton)
     {

@@ -60,3 +60,17 @@ EWARM/Panel_V10/Obj/TouchGFXGeneratedHAL.o
 EWARM/Panel_V10/Obj/TouchGFXGeneratedHAL.pbi
 EWARM/settings/Panel_V10.dnx
 EWARM/settings/Project.wsdt
+*.hex
+*.dep
+*.out
+*.map
+*.o
+*.pbi
+*.o
+*.pbi
+*.o
+*.pbi
+*.o
+*.pbi
+*.cache
+*.txt
