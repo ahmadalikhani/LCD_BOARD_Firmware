@@ -133,6 +133,33 @@ void MainScreenView::StartBtnClicked()
 {
   MainScreenViewBase::StartBtnClicked();
   model.setBtnPressed(START_BUTTON);
+  
+  StopButtonText.setVisible(true);
+  StopButton.setVisible(true);
+  StartButtonText.setVisible(false);
+  StartButton.setVisible(false);
+  StartButton.invalidate();
+  StartButtonText.invalidate();
+  StopButton.invalidate();
+  StopButtonText.invalidate();  
+  
+  model.clearBtnPressed(STOP_BUTTON);
+
+}
+
+void MainScreenView::StopBtnClicked()
+{
+  MainScreenViewBase::StartBtnClicked();
+  model.setBtnPressed(STOP_BUTTON);
+  
+  StopButtonText.setVisible(false);
+  StopButton.setVisible(false);
+  StartButtonText.setVisible(true);
+  StartButton.setVisible(true);
+  StartButton.invalidate();
+  StartButtonText.invalidate();
+  StopButton.invalidate();
+  StopButtonText.invalidate();  
 }
 
 void MainScreenView::handleTickEvent()
@@ -140,6 +167,7 @@ void MainScreenView::handleTickEvent()
   bool btnMode=0;
 
   keypad1.handleTickEvent();
+  CalibrationPage.handleTickEvent();
   
   btnMode = model.checkBtnPressed(ESC_BUTTON);
     if(btnMode == 1)
@@ -162,21 +190,50 @@ void MainScreenView::handleTickEvent()
        keypad1.invalidate();
     } 
     
+    if(model.checkBtnPressed(PARAMETER1_BUTTON) || model.checkBtnPressed(PARAMETER2_BUTTON) ||
+       model.checkBtnPressed(PARAMETER3_BUTTON) || model.checkBtnPressed(PARAMETER4_BUTTON) ||
+       model.checkBtnPressed(PARAMETER5_BUTTON) || model.checkBtnPressed(PARAMETER6_BUTTON) ||
+       model.checkBtnPressed(PARAMETER7_BUTTON) || model.checkBtnPressed(PARAMETER8_BUTTON) ||
+       model.checkBtnPressed(PARAMETER9_BUTTON) || model.checkBtnPressed(PARAMETER10_BUTTON) )
+    {
+       keypad1.setVisible(true);
+       keypad1.invalidate();
+    } 
+    
     if(counter == 30)
     {
         elapsed_time = model.getEnteredValue(ELAPSED_TIME);
         
         if(model.checkBtnPressed(START_BUTTON))
         {
-          end_time = model.getEnteredValue(TIME_SET);
+          if(model.getEnteredValue(TIME_SET) > 0) // in next step change dependencies to time mode Btn
+          {
+            end_time = model.getEnteredValue(TIME_SET);
+            model.setTimeMode(TIME_MODE);
+          }          
+          else
+          {
+            model.setTimeMode(INFINITE_MODE);
+          }
         }
         
-        if(end_time - elapsed_time > 0)
-          model.setEnteredValue(ELAPSED_TIME , elapsed_time +1);
+        if((model.getTimeMode(TIME_MODE) && end_time - elapsed_time > 0 && !model.checkBtnPressed(STOP_BUTTON) ) ||
+           ( model.getTimeMode(INFINITE_MODE) && !model.checkBtnPressed(STOP_BUTTON)))
+        {
+              model.setEnteredValue(ELAPSED_TIME , elapsed_time +1);
+        }
         else{
           model.setEnteredValue(ELAPSED_TIME , 0);
           end_time = 0;
-        
+          
+          StopButtonText.setVisible(false);
+          StopButton.setVisible(false);
+          StartButtonText.setVisible(true);
+          StartButton.setVisible(true);
+          StartButton.invalidate();
+          StartButtonText.invalidate();
+          StopButton.invalidate();
+          StopButtonText.invalidate();
         }
     VoltageGraph.addDataPoint(model.getEnteredValue(VOLTAGEGRAPH));
     CurrentGraph.addDataPoint(model.getEnteredValue(CURRENTGRAPH));
@@ -184,6 +241,7 @@ void MainScreenView::handleTickEvent()
     VoltageGraph.invalidate();
     CurrentGraph.invalidate();
     PowerGraph.invalidate();
+    
     
     model.setEnteredValue(VOLTAGEGRAPH ,(model.getEnteredValue(VOLTAGEGRAPH) + 2)); // graph test (delete in final)
     model.setEnteredValue(CURRENTGRAPH ,(model.getEnteredValue(CURRENTGRAPH) + 4)); // graph test (delete in final)

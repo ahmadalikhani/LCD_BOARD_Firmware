@@ -143,6 +143,13 @@ MainScreenViewBase::MainScreenViewBase() :
     StartButton.setPosition(430, 0, 50, 42);
     StartButton.setAction(flexButtonCallback);
 
+    StopButton.setBoxWithBorderPosition(0, 0, 50, 42);
+    StopButton.setBorderSize(3);
+    StopButton.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 0, 0), touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    StopButton.setPosition(430, 0, 50, 42);
+    StopButton.setVisible(false);
+    StopButton.setAction(flexButtonCallback);
+
     Setpoint.setXY(291, 54);
     Setpoint.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Setpoint.setLinespacing(0);
@@ -172,6 +179,12 @@ MainScreenViewBase::MainScreenViewBase() :
     StartButtonText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     StartButtonText.setLinespacing(0);
     StartButtonText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID12));
+
+    StopButtonText.setXY(443, 15);
+    StopButtonText.setVisible(false);
+    StopButtonText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    StopButtonText.setLinespacing(0);
+    StopButtonText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID162));
 
     TimeSetButton.setBoxWithBorderPosition(0, 0, 46, 23);
     TimeSetButton.setBorderSize(2);
@@ -314,7 +327,7 @@ MainScreenViewBase::MainScreenViewBase() :
 
     VoltageBox.setBoxWithBorderPosition(0, 0, 50, 25);
     VoltageBox.setBorderSize(2);
-    VoltageBox.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(0, 50, 100));
+    VoltageBox.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(20, 151, 197), touchgfx::Color::getColorFrom24BitRGB(20, 151, 197));
     VoltageBox.setPosition(1, 17, 50, 25);
 
     VoltageText.setXY(17, 23);
@@ -324,7 +337,7 @@ MainScreenViewBase::MainScreenViewBase() :
 
     CurrentBox.setBoxWithBorderPosition(0, 0, 50, 25);
     CurrentBox.setBorderSize(2);
-    CurrentBox.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(0, 50, 100));
+    CurrentBox.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 47, 0), touchgfx::Color::getColorFrom24BitRGB(255, 47, 0));
     CurrentBox.setPosition(117, 17, 50, 25);
 
     CurrentText.setXY(133, 23);
@@ -334,7 +347,7 @@ MainScreenViewBase::MainScreenViewBase() :
 
     PowerBox.setBoxWithBorderPosition(0, 0, 50, 25);
     PowerBox.setBorderSize(2);
-    PowerBox.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(0, 50, 100));
+    PowerBox.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(26, 255, 0), touchgfx::Color::getColorFrom24BitRGB(26, 255, 0));
     PowerBox.setPosition(238, 17, 50, 25);
 
     PowerText.setXY(254, 23);
@@ -496,7 +509,7 @@ MainScreenViewBase::MainScreenViewBase() :
     ModeText.setLinespacing(0);
     ModeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID74));
 
-    CalibrationPage.setXY(120, 67);
+    CalibrationPage.setXY(0, 1);
     CalibrationPage.setVisible(false);
 
     keypad1.setXY(190, 0);
@@ -509,12 +522,14 @@ MainScreenViewBase::MainScreenViewBase() :
     add(CurrentGraph);
     add(PowerGraph);
     add(StartButton);
+    add(StopButton);
     add(Setpoint);
     add(ARCLevel);
     add(CCLevel);
     add(CVLevel);
     add(QuanchTime);
     add(StartButtonText);
+    add(StopButtonText);
     add(TimeSetButton);
     add(TimeSetText);
     add(ElapsedTimeButton);
@@ -579,6 +594,13 @@ void MainScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButto
         //When StartButton clicked call virtual function
         //Call StartBtnClicked
         StartBtnClicked();
+    }
+    else if (&src == &StopButton)
+    {
+        //Interaction20
+        //When StopButton clicked call virtual function
+        //Call StopBtnClicked
+        StopBtnClicked();
     }
     else if (&src == &TimeSetButton)
     {

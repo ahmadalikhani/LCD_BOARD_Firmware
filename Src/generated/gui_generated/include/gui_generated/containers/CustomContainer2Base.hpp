@@ -10,6 +10,8 @@
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 
 class CustomContainer2Base : public touchgfx::Container
 {
@@ -26,6 +28,56 @@ public:
         // Override and implement this function in CustomContainer2
     }
 
+    virtual void Parameter1BtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
+    virtual void Parameter2BtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
+    virtual void Parameter3BtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
+    virtual void Parameter4BtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
+    virtual void Parameter5BtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
+    virtual void Parameter6BtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
+    virtual void Parameter7BtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
+    virtual void Parameter8BtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
+    virtual void Parameter9BtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
+    virtual void Parameter10BtnClicked()
+    {
+        // Override and implement this function in CustomContainer2
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -36,26 +88,26 @@ protected:
      */
     touchgfx::Box box2;
     touchgfx::Box box1;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton;
-    touchgfx::TextAreaWithOneWildcard QuanchText;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_1;
-    touchgfx::TextAreaWithOneWildcard QuanchText_1;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_2;
-    touchgfx::TextAreaWithOneWildcard QuanchText_2;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_3;
-    touchgfx::TextAreaWithOneWildcard QuanchText_3;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_4;
-    touchgfx::TextAreaWithOneWildcard QuanchText_4;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_5;
-    touchgfx::TextAreaWithOneWildcard QuanchText_5;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_1_1;
-    touchgfx::TextAreaWithOneWildcard QuanchText_1_1;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_2_1;
-    touchgfx::TextAreaWithOneWildcard QuanchText_2_1;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_3_1;
-    touchgfx::TextAreaWithOneWildcard QuanchText_3_1;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > QuanchTimeButton_4_1;
-    touchgfx::TextAreaWithOneWildcard QuanchText_4_1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ParameterBtn1;
+    touchgfx::TextAreaWithOneWildcard ParameterText1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ParameterBtn2;
+    touchgfx::TextAreaWithOneWildcard ParameterText2;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ParameterBtn3;
+    touchgfx::TextAreaWithOneWildcard ParameterText3;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ParameterBtn4;
+    touchgfx::TextAreaWithOneWildcard ParameterText4;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ParameterBtn5;
+    touchgfx::TextAreaWithOneWildcard ParameterText5;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ParameterBtn6;
+    touchgfx::TextAreaWithOneWildcard ParameterText6;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ParameterBtn7;
+    touchgfx::TextAreaWithOneWildcard ParameterText7;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ParameterBtn8;
+    touchgfx::TextAreaWithOneWildcard ParameterText8;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ParameterBtn9;
+    touchgfx::TextAreaWithOneWildcard ParameterText9;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ParameterBtn10;
+    touchgfx::TextAreaWithOneWildcard ParameterText10;
     touchgfx::TextArea Parameter1;
     touchgfx::TextArea Parameter6;
     touchgfx::TextArea Parameter2;
@@ -66,32 +118,36 @@ protected:
     touchgfx::TextArea Parameter5;
     touchgfx::TextArea Parameter10;
     touchgfx::TextArea Parameter7;
-    touchgfx::TextArea ARCLevel_6;
+    touchgfx::TextArea CalibrationPageText;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > CalibrationExitBtn;
+    touchgfx::Line ExitLine2;
+    touchgfx::PainterRGB565 ExitLine2Painter;
+    touchgfx::Line ExitLine1;
+    touchgfx::PainterRGB565 ExitLine1Painter;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t QUANCHTEXT_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar QuanchTextBuffer[QUANCHTEXT_SIZE];
-    static const uint16_t QUANCHTEXT_1_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar QuanchText_1Buffer[QUANCHTEXT_1_SIZE];
-    static const uint16_t QUANCHTEXT_2_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar QuanchText_2Buffer[QUANCHTEXT_2_SIZE];
-    static const uint16_t QUANCHTEXT_3_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar QuanchText_3Buffer[QUANCHTEXT_3_SIZE];
-    static const uint16_t QUANCHTEXT_4_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar QuanchText_4Buffer[QUANCHTEXT_4_SIZE];
-    static const uint16_t QUANCHTEXT_5_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar QuanchText_5Buffer[QUANCHTEXT_5_SIZE];
-    static const uint16_t QUANCHTEXT_1_1_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar QuanchText_1_1Buffer[QUANCHTEXT_1_1_SIZE];
-    static const uint16_t QUANCHTEXT_2_1_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar QuanchText_2_1Buffer[QUANCHTEXT_2_1_SIZE];
-    static const uint16_t QUANCHTEXT_3_1_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar QuanchText_3_1Buffer[QUANCHTEXT_3_1_SIZE];
-    static const uint16_t QUANCHTEXT_4_1_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar QuanchText_4_1Buffer[QUANCHTEXT_4_1_SIZE];
+    static const uint16_t PARAMETERTEXT1_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ParameterText1Buffer[PARAMETERTEXT1_SIZE];
+    static const uint16_t PARAMETERTEXT2_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ParameterText2Buffer[PARAMETERTEXT2_SIZE];
+    static const uint16_t PARAMETERTEXT3_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ParameterText3Buffer[PARAMETERTEXT3_SIZE];
+    static const uint16_t PARAMETERTEXT4_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ParameterText4Buffer[PARAMETERTEXT4_SIZE];
+    static const uint16_t PARAMETERTEXT5_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ParameterText5Buffer[PARAMETERTEXT5_SIZE];
+    static const uint16_t PARAMETERTEXT6_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ParameterText6Buffer[PARAMETERTEXT6_SIZE];
+    static const uint16_t PARAMETERTEXT7_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ParameterText7Buffer[PARAMETERTEXT7_SIZE];
+    static const uint16_t PARAMETERTEXT8_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ParameterText8Buffer[PARAMETERTEXT8_SIZE];
+    static const uint16_t PARAMETERTEXT9_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ParameterText9Buffer[PARAMETERTEXT9_SIZE];
+    static const uint16_t PARAMETERTEXT10_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar ParameterText10Buffer[PARAMETERTEXT10_SIZE];
 
 private:
 

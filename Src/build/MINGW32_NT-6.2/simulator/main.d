@@ -124,6 +124,7 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  gui/include/gui/containers/CustomContainer2.hpp \
  generated/gui_generated/include/gui_generated/containers/CustomContainer2Base.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
  gui/include/gui/containers/CustomContainer1.hpp \
  generated/gui_generated/include/gui_generated/containers/CustomContainer1Base.hpp \
  gui/include/gui/screen1_screen/Screen1View.hpp \
@@ -382,6 +383,8 @@ gui/include/gui/mainscreen_screen/MainScreenPresenter.hpp:
 gui/include/gui/containers/CustomContainer2.hpp:
 
 generated/gui_generated/include/gui_generated/containers/CustomContainer2Base.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
 
 gui/include/gui/containers/CustomContainer1.hpp:
 

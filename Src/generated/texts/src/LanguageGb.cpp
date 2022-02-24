@@ -22,23 +22,23 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE =
     294, // T_SingleUseId15
     74, // T_SingleUseId16
     234, // T_SingleUseId17
-    382, // T_SingleUseId18
-    382, // T_SingleUseId19
+    383, // T_SingleUseId18
+    383, // T_SingleUseId19
     312, // T_SingleUseId22
     312, // T_SingleUseId23
     312, // T_SingleUseId24
     312, // T_SingleUseId25
     312, // T_SingleUseId26
     0, // T_SingleUseId27
-    374, // T_SingleUseId29
-    374, // T_SingleUseId30
-    374, // T_SingleUseId31
+    375, // T_SingleUseId29
+    375, // T_SingleUseId30
+    375, // T_SingleUseId31
     111, // T_SingleUseId32
     87, // T_SingleUseId33
     256, // T_SingleUseId34
     312, // T_SingleUseId35
     312, // T_SingleUseId36
-    378, // T_SingleUseId37
+    387, // T_SingleUseId37
     322, // T_SingleUseId69
     314, // T_SingleUseId70
     303, // T_SingleUseId71
@@ -62,17 +62,17 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE =
     221, // T_SingleUseId108
     133, // T_SingleUseId109
     33, // T_SingleUseId110
-    386, // T_SingleUseId111
-    370, // T_SingleUseId112
-    394, // T_SingleUseId113
-    390, // T_SingleUseId114
-    400, // T_SingleUseId115
-    398, // T_SingleUseId116
+    391, // T_SingleUseId111
+    379, // T_SingleUseId112
+    399, // T_SingleUseId113
+    395, // T_SingleUseId114
+    405, // T_SingleUseId115
+    403, // T_SingleUseId116
     312, // T_SingleUseId117
     350, // T_SingleUseId118
-    355, // T_SingleUseId119
-    360, // T_SingleUseId120
-    365, // T_SingleUseId121
+    360, // T_SingleUseId119
+    365, // T_SingleUseId120
+    370, // T_SingleUseId121
     350, // T_SingleUseId122
     350, // T_SingleUseId124
     350, // T_SingleUseId125
@@ -111,5 +111,6 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE =
     312, // T_SingleUseId158
     312, // T_SingleUseId159
     312, // T_SingleUseId160
-    350  // T_SingleUseId161
+    350, // T_SingleUseId161
+    355  // T_SingleUseId162
 };

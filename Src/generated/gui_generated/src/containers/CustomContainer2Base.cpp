@@ -8,227 +8,253 @@
 CustomContainer2Base::CustomContainer2Base() :
     flexButtonCallback(this, &CustomContainer2Base::flexButtonCallbackHandler)
 {
-    setWidth(307);
-    setHeight(174);
-    box2.setPosition(0, 0, 307, 174);
+    setWidth(480);
+    setHeight(272);
+    box2.setPosition(96, 59, 307, 174);
     box2.setColor(touchgfx::Color::getColorFrom24BitRGB(202, 202, 202));
 
-    box1.setPosition(0, 0, 307, 22);
+    box1.setPosition(96, 59, 307, 22);
     box1.setColor(touchgfx::Color::getColorFrom24BitRGB(26, 0, 108));
 
-    QuanchTimeButton.setBoxWithBorderPosition(0, 0, 50, 27);
-    QuanchTimeButton.setBorderSize(2);
-    QuanchTimeButton.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    QuanchTimeButton.setPosition(100, 28, 50, 27);
+    ParameterBtn1.setBoxWithBorderPosition(0, 0, 50, 27);
+    ParameterBtn1.setBorderSize(2);
+    ParameterBtn1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    ParameterBtn1.setPosition(196, 87, 50, 27);
+    ParameterBtn1.setAction(flexButtonCallback);
 
-    QuanchText.setXY(112, 35);
-    QuanchText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    QuanchText.setLinespacing(0);
-    Unicode::snprintf(QuanchTextBuffer, QUANCHTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID127).getText());
-    QuanchText.setWildcard(QuanchTextBuffer);
-    QuanchText.resizeToCurrentText();
-    QuanchText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID126));
+    ParameterText1.setXY(208, 94);
+    ParameterText1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ParameterText1.setLinespacing(0);
+    Unicode::snprintf(ParameterText1Buffer, PARAMETERTEXT1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID127).getText());
+    ParameterText1.setWildcard(ParameterText1Buffer);
+    ParameterText1.resizeToCurrentText();
+    ParameterText1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID126));
 
-    QuanchTimeButton_1.setBoxWithBorderPosition(0, 0, 50, 27);
-    QuanchTimeButton_1.setBorderSize(2);
-    QuanchTimeButton_1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    QuanchTimeButton_1.setPosition(100, 57, 50, 27);
+    ParameterBtn2.setBoxWithBorderPosition(0, 0, 50, 27);
+    ParameterBtn2.setBorderSize(2);
+    ParameterBtn2.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    ParameterBtn2.setPosition(196, 116, 50, 27);
+    ParameterBtn2.setAction(flexButtonCallback);
 
-    QuanchText_1.setXY(112, 64);
-    QuanchText_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    QuanchText_1.setLinespacing(0);
-    Unicode::snprintf(QuanchText_1Buffer, QUANCHTEXT_1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID129).getText());
-    QuanchText_1.setWildcard(QuanchText_1Buffer);
-    QuanchText_1.resizeToCurrentText();
-    QuanchText_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID128));
+    ParameterText2.setXY(208, 123);
+    ParameterText2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ParameterText2.setLinespacing(0);
+    Unicode::snprintf(ParameterText2Buffer, PARAMETERTEXT2_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID129).getText());
+    ParameterText2.setWildcard(ParameterText2Buffer);
+    ParameterText2.resizeToCurrentText();
+    ParameterText2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID128));
 
-    QuanchTimeButton_2.setBoxWithBorderPosition(0, 0, 50, 27);
-    QuanchTimeButton_2.setBorderSize(2);
-    QuanchTimeButton_2.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    QuanchTimeButton_2.setPosition(100, 87, 50, 27);
+    ParameterBtn3.setBoxWithBorderPosition(0, 0, 50, 27);
+    ParameterBtn3.setBorderSize(2);
+    ParameterBtn3.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    ParameterBtn3.setPosition(196, 146, 50, 27);
+    ParameterBtn3.setAction(flexButtonCallback);
 
-    QuanchText_2.setXY(112, 94);
-    QuanchText_2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    QuanchText_2.setLinespacing(0);
-    Unicode::snprintf(QuanchText_2Buffer, QUANCHTEXT_2_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID131).getText());
-    QuanchText_2.setWildcard(QuanchText_2Buffer);
-    QuanchText_2.resizeToCurrentText();
-    QuanchText_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID130));
+    ParameterText3.setXY(208, 153);
+    ParameterText3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ParameterText3.setLinespacing(0);
+    Unicode::snprintf(ParameterText3Buffer, PARAMETERTEXT3_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID131).getText());
+    ParameterText3.setWildcard(ParameterText3Buffer);
+    ParameterText3.resizeToCurrentText();
+    ParameterText3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID130));
 
-    QuanchTimeButton_3.setBoxWithBorderPosition(0, 0, 50, 27);
-    QuanchTimeButton_3.setBorderSize(2);
-    QuanchTimeButton_3.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    QuanchTimeButton_3.setPosition(100, 116, 50, 27);
+    ParameterBtn4.setBoxWithBorderPosition(0, 0, 50, 27);
+    ParameterBtn4.setBorderSize(2);
+    ParameterBtn4.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    ParameterBtn4.setPosition(196, 175, 50, 27);
+    ParameterBtn4.setAction(flexButtonCallback);
 
-    QuanchText_3.setXY(112, 123);
-    QuanchText_3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    QuanchText_3.setLinespacing(0);
-    Unicode::snprintf(QuanchText_3Buffer, QUANCHTEXT_3_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID133).getText());
-    QuanchText_3.setWildcard(QuanchText_3Buffer);
-    QuanchText_3.resizeToCurrentText();
-    QuanchText_3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID132));
+    ParameterText4.setXY(208, 182);
+    ParameterText4.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ParameterText4.setLinespacing(0);
+    Unicode::snprintf(ParameterText4Buffer, PARAMETERTEXT4_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID133).getText());
+    ParameterText4.setWildcard(ParameterText4Buffer);
+    ParameterText4.resizeToCurrentText();
+    ParameterText4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID132));
 
-    QuanchTimeButton_4.setBoxWithBorderPosition(0, 0, 50, 27);
-    QuanchTimeButton_4.setBorderSize(2);
-    QuanchTimeButton_4.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    QuanchTimeButton_4.setPosition(100, 145, 50, 27);
+    ParameterBtn5.setBoxWithBorderPosition(0, 0, 50, 27);
+    ParameterBtn5.setBorderSize(2);
+    ParameterBtn5.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    ParameterBtn5.setPosition(196, 204, 50, 27);
+    ParameterBtn5.setAction(flexButtonCallback);
 
-    QuanchText_4.setXY(112, 152);
-    QuanchText_4.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    QuanchText_4.setLinespacing(0);
-    Unicode::snprintf(QuanchText_4Buffer, QUANCHTEXT_4_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID135).getText());
-    QuanchText_4.setWildcard(QuanchText_4Buffer);
-    QuanchText_4.resizeToCurrentText();
-    QuanchText_4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID134));
+    ParameterText5.setXY(208, 211);
+    ParameterText5.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ParameterText5.setLinespacing(0);
+    Unicode::snprintf(ParameterText5Buffer, PARAMETERTEXT5_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID135).getText());
+    ParameterText5.setWildcard(ParameterText5Buffer);
+    ParameterText5.resizeToCurrentText();
+    ParameterText5.setTypedText(touchgfx::TypedText(T_SINGLEUSEID134));
 
-    QuanchTimeButton_5.setBoxWithBorderPosition(0, 0, 50, 27);
-    QuanchTimeButton_5.setBorderSize(2);
-    QuanchTimeButton_5.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    QuanchTimeButton_5.setPosition(251, 28, 50, 27);
+    ParameterBtn6.setBoxWithBorderPosition(0, 0, 50, 27);
+    ParameterBtn6.setBorderSize(2);
+    ParameterBtn6.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    ParameterBtn6.setPosition(347, 87, 50, 27);
+    ParameterBtn6.setAction(flexButtonCallback);
 
-    QuanchText_5.setXY(263, 35);
-    QuanchText_5.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    QuanchText_5.setLinespacing(0);
-    Unicode::snprintf(QuanchText_5Buffer, QUANCHTEXT_5_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID137).getText());
-    QuanchText_5.setWildcard(QuanchText_5Buffer);
-    QuanchText_5.resizeToCurrentText();
-    QuanchText_5.setTypedText(touchgfx::TypedText(T_SINGLEUSEID136));
+    ParameterText6.setXY(359, 94);
+    ParameterText6.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ParameterText6.setLinespacing(0);
+    Unicode::snprintf(ParameterText6Buffer, PARAMETERTEXT6_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID137).getText());
+    ParameterText6.setWildcard(ParameterText6Buffer);
+    ParameterText6.resizeToCurrentText();
+    ParameterText6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID136));
 
-    QuanchTimeButton_1_1.setBoxWithBorderPosition(0, 0, 50, 27);
-    QuanchTimeButton_1_1.setBorderSize(2);
-    QuanchTimeButton_1_1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    QuanchTimeButton_1_1.setPosition(251, 57, 50, 27);
+    ParameterBtn7.setBoxWithBorderPosition(0, 0, 50, 27);
+    ParameterBtn7.setBorderSize(2);
+    ParameterBtn7.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    ParameterBtn7.setPosition(347, 116, 50, 27);
+    ParameterBtn7.setAction(flexButtonCallback);
 
-    QuanchText_1_1.setXY(263, 64);
-    QuanchText_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    QuanchText_1_1.setLinespacing(0);
-    Unicode::snprintf(QuanchText_1_1Buffer, QUANCHTEXT_1_1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID139).getText());
-    QuanchText_1_1.setWildcard(QuanchText_1_1Buffer);
-    QuanchText_1_1.resizeToCurrentText();
-    QuanchText_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID138));
+    ParameterText7.setXY(359, 123);
+    ParameterText7.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ParameterText7.setLinespacing(0);
+    Unicode::snprintf(ParameterText7Buffer, PARAMETERTEXT7_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID139).getText());
+    ParameterText7.setWildcard(ParameterText7Buffer);
+    ParameterText7.resizeToCurrentText();
+    ParameterText7.setTypedText(touchgfx::TypedText(T_SINGLEUSEID138));
 
-    QuanchTimeButton_2_1.setBoxWithBorderPosition(0, 0, 50, 27);
-    QuanchTimeButton_2_1.setBorderSize(2);
-    QuanchTimeButton_2_1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    QuanchTimeButton_2_1.setPosition(251, 87, 50, 27);
+    ParameterBtn8.setBoxWithBorderPosition(0, 0, 50, 27);
+    ParameterBtn8.setBorderSize(2);
+    ParameterBtn8.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    ParameterBtn8.setPosition(347, 146, 50, 27);
+    ParameterBtn8.setAction(flexButtonCallback);
 
-    QuanchText_2_1.setXY(263, 94);
-    QuanchText_2_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    QuanchText_2_1.setLinespacing(0);
-    Unicode::snprintf(QuanchText_2_1Buffer, QUANCHTEXT_2_1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID141).getText());
-    QuanchText_2_1.setWildcard(QuanchText_2_1Buffer);
-    QuanchText_2_1.resizeToCurrentText();
-    QuanchText_2_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID140));
+    ParameterText8.setXY(359, 153);
+    ParameterText8.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ParameterText8.setLinespacing(0);
+    Unicode::snprintf(ParameterText8Buffer, PARAMETERTEXT8_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID141).getText());
+    ParameterText8.setWildcard(ParameterText8Buffer);
+    ParameterText8.resizeToCurrentText();
+    ParameterText8.setTypedText(touchgfx::TypedText(T_SINGLEUSEID140));
 
-    QuanchTimeButton_3_1.setBoxWithBorderPosition(0, 0, 50, 27);
-    QuanchTimeButton_3_1.setBorderSize(2);
-    QuanchTimeButton_3_1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    QuanchTimeButton_3_1.setPosition(251, 116, 50, 27);
+    ParameterBtn9.setBoxWithBorderPosition(0, 0, 50, 27);
+    ParameterBtn9.setBorderSize(2);
+    ParameterBtn9.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    ParameterBtn9.setPosition(347, 175, 50, 27);
+    ParameterBtn9.setAction(flexButtonCallback);
 
-    QuanchText_3_1.setXY(263, 123);
-    QuanchText_3_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    QuanchText_3_1.setLinespacing(0);
-    Unicode::snprintf(QuanchText_3_1Buffer, QUANCHTEXT_3_1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID143).getText());
-    QuanchText_3_1.setWildcard(QuanchText_3_1Buffer);
-    QuanchText_3_1.resizeToCurrentText();
-    QuanchText_3_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID142));
+    ParameterText9.setXY(359, 182);
+    ParameterText9.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ParameterText9.setLinespacing(0);
+    Unicode::snprintf(ParameterText9Buffer, PARAMETERTEXT9_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID143).getText());
+    ParameterText9.setWildcard(ParameterText9Buffer);
+    ParameterText9.resizeToCurrentText();
+    ParameterText9.setTypedText(touchgfx::TypedText(T_SINGLEUSEID142));
 
-    QuanchTimeButton_4_1.setBoxWithBorderPosition(0, 0, 50, 27);
-    QuanchTimeButton_4_1.setBorderSize(2);
-    QuanchTimeButton_4_1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    QuanchTimeButton_4_1.setPosition(251, 145, 50, 27);
+    ParameterBtn10.setBoxWithBorderPosition(0, 0, 50, 27);
+    ParameterBtn10.setBorderSize(2);
+    ParameterBtn10.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(255, 255, 255), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
+    ParameterBtn10.setPosition(347, 204, 50, 27);
+    ParameterBtn10.setAction(flexButtonCallback);
 
-    QuanchText_4_1.setXY(263, 152);
-    QuanchText_4_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    QuanchText_4_1.setLinespacing(0);
-    Unicode::snprintf(QuanchText_4_1Buffer, QUANCHTEXT_4_1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID145).getText());
-    QuanchText_4_1.setWildcard(QuanchText_4_1Buffer);
-    QuanchText_4_1.resizeToCurrentText();
-    QuanchText_4_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID144));
+    ParameterText10.setXY(359, 211);
+    ParameterText10.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ParameterText10.setLinespacing(0);
+    Unicode::snprintf(ParameterText10Buffer, PARAMETERTEXT10_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID145).getText());
+    ParameterText10.setWildcard(ParameterText10Buffer);
+    ParameterText10.resizeToCurrentText();
+    ParameterText10.setTypedText(touchgfx::TypedText(T_SINGLEUSEID144));
 
-    Parameter1.setXY(6, 32);
+    Parameter1.setXY(102, 91);
     Parameter1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Parameter1.setLinespacing(0);
     Parameter1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID146));
 
-    Parameter6.setXY(155, 32);
+    Parameter6.setXY(251, 91);
     Parameter6.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Parameter6.setLinespacing(0);
     Parameter6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID147));
 
-    Parameter2.setXY(6, 61);
+    Parameter2.setXY(102, 120);
     Parameter2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Parameter2.setLinespacing(0);
     Parameter2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID148));
 
-    Parameter3.setXY(6, 91);
+    Parameter3.setXY(102, 150);
     Parameter3.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Parameter3.setLinespacing(0);
     Parameter3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID149));
 
-    Parameter8.setXY(155, 91);
+    Parameter8.setXY(251, 150);
     Parameter8.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Parameter8.setLinespacing(0);
     Parameter8.setTypedText(touchgfx::TypedText(T_SINGLEUSEID150));
 
-    Parameter4.setXY(6, 120);
+    Parameter4.setXY(100, 179);
     Parameter4.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Parameter4.setLinespacing(0);
     Parameter4.setTypedText(touchgfx::TypedText(T_SINGLEUSEID151));
 
-    Parameter9.setXY(155, 120);
+    Parameter9.setXY(251, 179);
     Parameter9.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Parameter9.setLinespacing(0);
     Parameter9.setTypedText(touchgfx::TypedText(T_SINGLEUSEID152));
 
-    Parameter5.setXY(6, 149);
+    Parameter5.setXY(102, 208);
     Parameter5.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Parameter5.setLinespacing(0);
     Parameter5.setTypedText(touchgfx::TypedText(T_SINGLEUSEID153));
 
-    Parameter10.setXY(155, 149);
+    Parameter10.setXY(251, 208);
     Parameter10.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Parameter10.setLinespacing(0);
     Parameter10.setTypedText(touchgfx::TypedText(T_SINGLEUSEID154));
 
-    Parameter7.setXY(155, 61);
+    Parameter7.setXY(251, 120);
     Parameter7.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     Parameter7.setLinespacing(0);
     Parameter7.setTypedText(touchgfx::TypedText(T_SINGLEUSEID155));
 
-    ARCLevel_6.setXY(6, 4);
-    ARCLevel_6.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    ARCLevel_6.setLinespacing(0);
-    ARCLevel_6.setTypedText(touchgfx::TypedText(T_SINGLEUSEID156));
+    CalibrationPageText.setXY(102, 63);
+    CalibrationPageText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    CalibrationPageText.setLinespacing(0);
+    CalibrationPageText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID156));
 
     CalibrationExitBtn.setBoxWithBorderPosition(0, 0, 18, 15);
-    CalibrationExitBtn.setBorderSize(5);
+    CalibrationExitBtn.setBorderSize(6);
     CalibrationExitBtn.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0), touchgfx::Color::getColorFrom24BitRGB(255, 0, 0), touchgfx::Color::getColorFrom24BitRGB(255, 0, 0), touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
-    CalibrationExitBtn.setPosition(283, 4, 18, 15);
+    CalibrationExitBtn.setPosition(379, 63, 18, 15);
     CalibrationExitBtn.setAction(flexButtonCallback);
+
+    ExitLine2.setPosition(379, 63, 18, 15);
+    ExitLine2Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    ExitLine2.setPainter(ExitLine2Painter);
+    ExitLine2.setStart(4, 3);
+    ExitLine2.setEnd(15, 12);
+    ExitLine2.setLineWidth(2);
+    ExitLine2.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+
+    ExitLine1.setPosition(379, 63, 18, 15);
+    ExitLine1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    ExitLine1.setPainter(ExitLine1Painter);
+    ExitLine1.setStart(15, 3);
+    ExitLine1.setEnd(4, 12);
+    ExitLine1.setLineWidth(2);
+    ExitLine1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
 
     add(box2);
     add(box1);
-    add(QuanchTimeButton);
-    add(QuanchText);
-    add(QuanchTimeButton_1);
-    add(QuanchText_1);
-    add(QuanchTimeButton_2);
-    add(QuanchText_2);
-    add(QuanchTimeButton_3);
-    add(QuanchText_3);
-    add(QuanchTimeButton_4);
-    add(QuanchText_4);
-    add(QuanchTimeButton_5);
-    add(QuanchText_5);
-    add(QuanchTimeButton_1_1);
-    add(QuanchText_1_1);
-    add(QuanchTimeButton_2_1);
-    add(QuanchText_2_1);
-    add(QuanchTimeButton_3_1);
-    add(QuanchText_3_1);
-    add(QuanchTimeButton_4_1);
-    add(QuanchText_4_1);
+    add(ParameterBtn1);
+    add(ParameterText1);
+    add(ParameterBtn2);
+    add(ParameterText2);
+    add(ParameterBtn3);
+    add(ParameterText3);
+    add(ParameterBtn4);
+    add(ParameterText4);
+    add(ParameterBtn5);
+    add(ParameterText5);
+    add(ParameterBtn6);
+    add(ParameterText6);
+    add(ParameterBtn7);
+    add(ParameterText7);
+    add(ParameterBtn8);
+    add(ParameterText8);
+    add(ParameterBtn9);
+    add(ParameterText9);
+    add(ParameterBtn10);
+    add(ParameterText10);
     add(Parameter1);
     add(Parameter6);
     add(Parameter2);
@@ -239,8 +265,10 @@ CustomContainer2Base::CustomContainer2Base() :
     add(Parameter5);
     add(Parameter10);
     add(Parameter7);
-    add(ARCLevel_6);
+    add(CalibrationPageText);
     add(CalibrationExitBtn);
+    add(ExitLine2);
+    add(ExitLine1);
 }
 
 void CustomContainer2Base::initialize()
@@ -250,7 +278,77 @@ void CustomContainer2Base::initialize()
 
 void CustomContainer2Base::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
 {
-    if (&src == &CalibrationExitBtn)
+    if (&src == &ParameterBtn1)
+    {
+        //Interaction2
+        //When ParameterBtn1 clicked call virtual function
+        //Call Parameter1BtnClicked
+        Parameter1BtnClicked();
+    }
+    else if (&src == &ParameterBtn2)
+    {
+        //Interaction3
+        //When ParameterBtn2 clicked call virtual function
+        //Call Parameter2BtnClicked
+        Parameter2BtnClicked();
+    }
+    else if (&src == &ParameterBtn3)
+    {
+        //Interaction4
+        //When ParameterBtn3 clicked call virtual function
+        //Call Parameter3BtnClicked
+        Parameter3BtnClicked();
+    }
+    else if (&src == &ParameterBtn4)
+    {
+        //Interaction5
+        //When ParameterBtn4 clicked call virtual function
+        //Call Parameter4BtnClicked
+        Parameter4BtnClicked();
+    }
+    else if (&src == &ParameterBtn5)
+    {
+        //Interaction6
+        //When ParameterBtn5 clicked call virtual function
+        //Call Parameter5BtnClicked
+        Parameter5BtnClicked();
+    }
+    else if (&src == &ParameterBtn6)
+    {
+        //Interaction7
+        //When ParameterBtn6 clicked call virtual function
+        //Call Parameter6BtnClicked
+        Parameter6BtnClicked();
+    }
+    else if (&src == &ParameterBtn7)
+    {
+        //Interaction8
+        //When ParameterBtn7 clicked call virtual function
+        //Call Parameter7BtnClicked
+        Parameter7BtnClicked();
+    }
+    else if (&src == &ParameterBtn8)
+    {
+        //Interaction9
+        //When ParameterBtn8 clicked call virtual function
+        //Call Parameter8BtnClicked
+        Parameter8BtnClicked();
+    }
+    else if (&src == &ParameterBtn9)
+    {
+        //Interaction10
+        //When ParameterBtn9 clicked call virtual function
+        //Call Parameter9BtnClicked
+        Parameter9BtnClicked();
+    }
+    else if (&src == &ParameterBtn10)
+    {
+        //Interaction11
+        //When ParameterBtn10 clicked call virtual function
+        //Call Parameter10BtnClicked
+        Parameter10BtnClicked();
+    }
+    else if (&src == &CalibrationExitBtn)
     {
         //Interaction1
         //When CalibrationExitBtn clicked call virtual function

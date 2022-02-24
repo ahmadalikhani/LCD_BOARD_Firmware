@@ -23,8 +23,7 @@ public:
     virtual void TimeSetBtnClicked();
     virtual void CalibrationPageBtnClicked();
     virtual void StartBtnClicked();
-    
-    
+    virtual void StopBtnClicked();
     
 protected:
 };

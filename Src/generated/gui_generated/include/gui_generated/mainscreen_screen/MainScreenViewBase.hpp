@@ -91,6 +91,11 @@ public:
         // Override and implement this function in MainScreen
     }
 
+    virtual void StopBtnClicked()
+    {
+        // Override and implement this function in MainScreen
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -124,12 +129,14 @@ protected:
     touchgfx::GraphLabelsX PowerGraphMajorXAxisLabel;
     touchgfx::GraphLabelsY PowerGraphMajorYAxisLabel;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > StartButton;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > StopButton;
     touchgfx::TextArea Setpoint;
     touchgfx::TextArea ARCLevel;
     touchgfx::TextArea CCLevel;
     touchgfx::TextArea CVLevel;
     touchgfx::TextArea QuanchTime;
     touchgfx::TextArea StartButtonText;
+    touchgfx::TextArea StopButtonText;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > TimeSetButton;
     touchgfx::TextAreaWithOneWildcard TimeSetText;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > ElapsedTimeButton;

@@ -96,6 +96,7 @@ build/MINGW32_NT-6.2/gui/src/mainscreen_screen/MainScreenPresenter.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  gui/include/gui/containers/CustomContainer2.hpp \
  generated/gui_generated/include/gui_generated/containers/CustomContainer2Base.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
  gui/include/gui/containers/CustomContainer1.hpp \
  generated/gui_generated/include/gui_generated/containers/CustomContainer1Base.hpp
 
@@ -290,6 +291,8 @@ gui/include/gui/model/ModelListener.hpp:
 gui/include/gui/containers/CustomContainer2.hpp:
 
 generated/gui_generated/include/gui_generated/containers/CustomContainer2Base.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
 
 gui/include/gui/containers/CustomContainer1.hpp:
 

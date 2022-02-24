@@ -5,8 +5,8 @@
 
 Model model;
 int temporary_value=0;
-
 extern uint8_t input_mode;
+
 CustomContainer1::CustomContainer1()
 {
 
