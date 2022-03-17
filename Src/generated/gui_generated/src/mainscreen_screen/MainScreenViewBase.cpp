@@ -480,7 +480,7 @@ MainScreenViewBase::MainScreenViewBase() :
     slideMenu1.add(PowermodeButton);
 
     PowermodeText.setXY(21, 3);
-    PowermodeText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    PowermodeText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     PowermodeText.setLinespacing(0);
     PowermodeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID75));
     slideMenu1.add(PowermodeText);
@@ -493,7 +493,7 @@ MainScreenViewBase::MainScreenViewBase() :
     slideMenu1.add(VoltagemodeButton);
 
     VoltagemodeText.setXY(17, 19);
-    VoltagemodeText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    VoltagemodeText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     VoltagemodeText.setLinespacing(0);
     VoltagemodeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID76));
     slideMenu1.add(VoltagemodeText);
@@ -506,7 +506,7 @@ MainScreenViewBase::MainScreenViewBase() :
     slideMenu1.add(CurrentmodeButton);
 
     CurrentmodeText.setXY(17, 35);
-    CurrentmodeText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    CurrentmodeText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     CurrentmodeText.setLinespacing(0);
     CurrentmodeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID77));
     slideMenu1.add(CurrentmodeText);
@@ -518,7 +518,7 @@ MainScreenViewBase::MainScreenViewBase() :
     ModeBox.setAction(flexButtonCallback);
 
     ModeText.setXY(341, 8);
-    ModeText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    ModeText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     ModeText.setLinespacing(0);
     ModeText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID74));
 

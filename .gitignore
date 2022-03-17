@@ -74,3 +74,4 @@ EWARM/settings/Project.wsdt
 *.pbi
 *.cache
 *.txt
+*.dnx

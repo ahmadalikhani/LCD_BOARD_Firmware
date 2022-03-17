@@ -14,6 +14,7 @@ extern touchgfx::GeneratedFont& getFont_verdana_11_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdana_17_4bpp();
 extern touchgfx::GeneratedFont& getFont_times_8_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdana_14_4bpp();
+extern touchgfx::GeneratedFont& getFont_arialbd_11_4bpp();
 
 const touchgfx::Font* touchgfx_fonts[] =
 {
@@ -25,7 +26,8 @@ const touchgfx::Font* touchgfx_fonts[] =
     &(getFont_verdana_11_4bpp()),
     &(getFont_verdana_17_4bpp()),
     &(getFont_times_8_4bpp()),
-    &(getFont_verdana_14_4bpp())
+    &(getFont_verdana_14_4bpp()),
+    &(getFont_arialbd_11_4bpp())
 };
 
 extern const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[];
@@ -68,13 +70,13 @@ const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCAT
     { 5, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 5, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 5, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 9, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 9, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 9, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 9, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 9, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 9, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 9, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
@@ -203,6 +205,9 @@ void resetFont(touchgfx::FontId fontId)
         break;
     case 8:
         touchgfx_fonts[8] = &(getFont_verdana_14_4bpp());
+        break;
+    case 9:
+        touchgfx_fonts[9] = &(getFont_arialbd_11_4bpp());
         break;
     }
 }

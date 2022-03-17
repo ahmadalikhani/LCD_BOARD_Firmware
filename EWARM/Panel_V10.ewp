@@ -1215,6 +1215,9 @@
         <name>$PROJ_DIR$/../Src/generated/fonts/src/CachedFont.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$/../Src/generated/fonts/src/Font_arialbd_11_4bpp_0.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$/../Src/generated/fonts/src/Font_times_8_4bpp_0.cpp</name>
       </file>
       <file>
@@ -1248,6 +1251,9 @@
         <name>$PROJ_DIR$/../Src/generated/fonts/src/GeneratedFont.cpp</name>
       </file>
       <file>
+        <name>$PROJ_DIR$/../Src/generated/fonts/src/Kerning_arialbd_11_4bpp.cpp</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$/../Src/generated/fonts/src/Kerning_times_8_4bpp.cpp</name>
       </file>
       <file>
@@ -1273,6 +1279,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$/../Src/generated/fonts/src/Kerning_verdana_7_4bpp.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Src/generated/fonts/src/Table_arialbd_11_4bpp.cpp</name>
       </file>
       <file>
         <name>$PROJ_DIR$/../Src/generated/fonts/src/Table_times_8_4bpp.cpp</name>

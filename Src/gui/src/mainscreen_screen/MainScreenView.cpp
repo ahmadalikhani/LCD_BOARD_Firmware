@@ -232,6 +232,10 @@ void MainScreenView::handleTickEvent()
        keypad1.invalidate();
     } 
     
+    PowerGraph.setGraphRangeY(0, 200);
+    VoltageGraph.setGraphRangeY(0, 200);
+    CurrentGraph.setGraphRangeY(0, 200);
+    
     if(counter == 30)
     {
         elapsed_time = model.getEnteredValue(ELAPSED_TIME);

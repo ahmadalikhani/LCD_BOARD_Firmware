@@ -624,7 +624,7 @@
             "Name": "CVLevel",
             "X": 291,
             "Y": 144,
-            "Width": 44,
+            "Width": 43,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -1815,7 +1815,7 @@
             "Name": "VoltageTitle",
             "X": 1,
             "Y": 1,
-            "Width": 57,
+            "Width": 58,
             "Height": 13,
             "Visible": true,
             "LockPosition": false,
@@ -2234,9 +2234,9 @@
                 "TextId": "SingleUseId75",
                 "TextRotation": "0",
                 "Color": {
-                  "Red": 0,
-                  "Green": 0,
-                  "Blue": 0
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
                 },
                 "Alpha": 255,
                 "AutoSize": true,
@@ -2244,7 +2244,7 @@
                 "Name": "PowermodeText",
                 "X": 21,
                 "Y": 3,
-                "Width": 61,
+                "Width": 65,
                 "Height": 13,
                 "Visible": true,
                 "LockPosition": false,
@@ -2307,9 +2307,9 @@
                 "TextId": "SingleUseId76",
                 "TextRotation": "0",
                 "Color": {
-                  "Red": 0,
-                  "Green": 0,
-                  "Blue": 0
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
                 },
                 "Alpha": 255,
                 "AutoSize": true,
@@ -2317,7 +2317,7 @@
                 "Name": "VoltagemodeText",
                 "X": 17,
                 "Y": 19,
-                "Width": 68,
+                "Width": 70,
                 "Height": 13,
                 "Visible": true,
                 "LockPosition": false,
@@ -2380,9 +2380,9 @@
                 "TextId": "SingleUseId77",
                 "TextRotation": "0",
                 "Color": {
-                  "Red": 0,
-                  "Green": 0,
-                  "Blue": 0
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
                 },
                 "Alpha": 255,
                 "AutoSize": true,
@@ -2390,7 +2390,7 @@
                 "Name": "CurrentmodeText",
                 "X": 17,
                 "Y": 35,
-                "Width": 68,
+                "Width": 71,
                 "Height": 13,
                 "Visible": true,
                 "LockPosition": false,
@@ -2483,9 +2483,9 @@
             "TextId": "SingleUseId74",
             "TextRotation": "0",
             "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
             },
             "Alpha": 255,
             "AutoSize": true,
@@ -2493,7 +2493,7 @@
             "Name": "ModeText",
             "X": 341,
             "Y": 8,
-            "Width": 61,
+            "Width": 65,
             "Height": 13,
             "Visible": true,
             "LockPosition": true,
