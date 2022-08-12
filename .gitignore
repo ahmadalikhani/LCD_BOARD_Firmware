@@ -75,3 +75,5 @@ EWARM/settings/Project.wsdt
 *.cache
 *.txt
 *.dnx
+*.su
+*.mk

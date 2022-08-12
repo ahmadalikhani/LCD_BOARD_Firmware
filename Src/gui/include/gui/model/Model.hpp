@@ -2,7 +2,7 @@
 #define MODEL_HPP
 
 #include <stdint.h>
-#include <C:\Users\Ahmad\WorkSpace\PosheshHayeNanoSakhtar\LCD_BOARD_Firmware\Panel\Panel_V.14_LTDC_NEW_4.3_(V13-Modified)\Inc\defines.h>  // for final code change to #include <defines.h>
+#include <defines.h>  // for final code change to #include <defines.h>
 class ModelListener;
 
 class Model
